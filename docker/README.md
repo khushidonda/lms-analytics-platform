@@ -14,6 +14,9 @@ Wait ~3 minutes for Moodle to initialize on first run.
 | Admin login | `admin` / `Admin123!` |
 | MariaDB | `localhost:3306`, db `moodle`, user `moodle`, pass `moodle` |
 
+> **Note:** Bitnami Moodle/MariaDB images were removed from Docker Hub in 2025.
+> This project uses `erseco/alpine-moodle` + official `mariadb:11` instead.
+
 ## First-Time Moodle Configuration
 
 1. Log in as admin
@@ -29,4 +32,6 @@ Wait ~3 minutes for Moodle to initialize on first run.
 docker compose down
 ```
 
-Data persists in `docker/moodledata/` and `docker/mysqldata/`.
+Data persists in `docker/moodledata/`, `docker/moodlehtml/`, and `docker/mysqldata/`.
+
+First startup takes 2–3 minutes while Moodle installs.

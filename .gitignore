@@ -19,6 +19,7 @@ Thumbs.db
 
 # Docker volumes
 docker/moodledata/
+docker/moodlehtml/
 docker/mysqldata/
 
 # IDE

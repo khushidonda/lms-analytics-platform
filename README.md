@@ -22,7 +22,7 @@ A full-stack learning analytics platform simulating enterprise LMS operations at
 
 ## Tech Stack
 
-- **LMS:** Moodle 4.3 (Docker / Bitnami)
+- **LMS:** Moodle (Docker — `erseco/alpine-moodle` + MariaDB 11)
 - **Database:** SQLite reporting warehouse (mirrors Moodle `mdl_*` schema)
 - **Data Generation:** Python 3.11, Faker, Pandas
 - **Analytics:** SQL (CTEs, window functions), Power BI, Databricks
