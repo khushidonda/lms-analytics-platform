@@ -1,0 +1,281 @@
+id,username,firstname,lastname,email,department,role,hire_date,deleted
+1,danielle.johnson1,Danielle,Johnson,danielle.johnson@joby.training,Flight Operations,Employee,2024-04-02,0
+2,jeffrey.doyle2,Jeffrey,Doyle,jeffrey.doyle@joby.training,Flight Operations,Employee,2025-06-11,0
+3,patricia.miller3,Patricia,Miller,patricia.miller@joby.training,Flight Operations,Technician,2024-09-08,0
+4,anthony.robinson4,Anthony,Robinson,anthony.robinson@joby.training,Flight Operations,Manager,2024-12-07,0
+5,anthony.gonzalez5,Anthony,Gonzalez,anthony.gonzalez@joby.training,Flight Operations,Manager,2025-05-13,0
+6,amy.robinson6,Amy,Robinson,amy.robinson@joby.training,Flight Operations,Manager,2025-03-08,0
+7,lisa.smith7,Lisa,Smith,lisa.smith@joby.training,Flight Operations,Employee,2025-10-28,0
+8,helen.peterson8,Helen,Peterson,helen.peterson@joby.training,Flight Operations,Employee,2023-11-25,0
+9,susan.rogers9,Susan,Rogers,susan.rogers@joby.training,Flight Operations,Analyst,2023-09-18,0
+10,colin.abbott10,Colin,Abbott,colin.abbott@joby.training,Flight Operations,Employee,2025-03-24,0
+11,lindsay.blair11,Lindsay,Blair,lindsay.blair@joby.training,Flight Operations,Employee,2025-01-10,0
+12,teresa.gray12,Teresa,Gray,teresa.gray@joby.training,Flight Operations,Employee,2025-01-27,0
+13,maria.montgomery13,Maria,Montgomery,maria.montgomery@joby.training,Flight Operations,Manager,2025-12-28,0
+14,barbara.bush14,Barbara,Bush,barbara.bush@joby.training,Flight Operations,Manager,2023-07-29,0
+15,jeremy.roberts15,Jeremy,Roberts,jeremy.roberts@joby.training,Flight Operations,Employee,2023-09-04,0
+16,jesse.garcia16,Jesse,Garcia,jesse.garcia@joby.training,Flight Operations,Manager,2024-04-05,0
+17,cynthia.diaz17,Cynthia,Diaz,cynthia.diaz@joby.training,Flight Operations,Analyst,2024-07-14,0
+18,jason.adams18,Jason,Adams,jason.adams@joby.training,Flight Operations,Manager,2026-03-19,0
+19,deborah.lynch19,Deborah,Lynch,deborah.lynch@joby.training,Flight Operations,Analyst,2023-12-12,0
+20,jessica.martin20,Jessica,Martin,jessica.martin@joby.training,Flight Operations,Technician,2024-07-24,0
+21,veronica.bowman21,Veronica,Bowman,veronica.bowman@joby.training,Flight Operations,Employee,2025-02-01,0
+22,gabrielle.cameron22,Gabrielle,Cameron,gabrielle.cameron@joby.training,Flight Operations,Manager,2025-09-26,0
+23,jeremy.johnson23,Jeremy,Johnson,jeremy.johnson@joby.training,Flight Operations,Analyst,2024-05-16,0
+24,joseph.clark24,Joseph,Clark,joseph.clark@joby.training,Flight Operations,Technician,2026-03-26,0
+25,nancy.edwards25,Nancy,Edwards,nancy.edwards@joby.training,Flight Operations,Technician,2025-05-19,0
+26,randall.rocha26,Randall,Rocha,randall.rocha@joby.training,Flight Operations,Manager,2024-10-18,0
+27,joseph.wright27,Joseph,Wright,joseph.wright@joby.training,Flight Operations,Manager,2025-02-06,0
+28,jose.richards28,Jose,Richards,jose.richards@joby.training,Flight Operations,Technician,2026-02-05,0
+29,reginald.robinson29,Reginald,Robinson,reginald.robinson@joby.training,Flight Operations,Employee,2026-05-24,0
+30,william.davis30,William,Davis,william.davis@joby.training,Flight Operations,Employee,2023-07-30,0
+31,daniel.burton31,Daniel,Burton,daniel.burton@joby.training,Flight Operations,Analyst,2025-10-14,0
+32,robert.brown32,Robert,Brown,robert.brown@joby.training,Flight Operations,Employee,2024-07-26,0
+33,wendy.rice33,Wendy,Rice,wendy.rice@joby.training,Flight Operations,Technician,2026-04-25,0
+34,michelle.smith34,Michelle,Smith,michelle.smith@joby.training,Flight Operations,Technician,2025-07-28,0
+35,erin.herrera35,Erin,Herrera,erin.herrera@joby.training,Flight Operations,Technician,2024-03-24,0
+36,danielle.rodriguez36,Danielle,Rodriguez,danielle.rodriguez@joby.training,Flight Operations,Employee,2024-09-22,0
+37,shawn.mckay37,Shawn,Mckay,shawn.mckay@joby.training,Flight Operations,Analyst,2026-01-12,0
+38,jose.mason38,Jose,Mason,jose.mason@joby.training,Flight Operations,Employee,2023-12-20,0
+39,rita.harrell39,Rita,Harrell,rita.harrell@joby.training,Flight Operations,Analyst,2024-04-27,0
+40,danielle.lynch40,Danielle,Lynch,danielle.lynch@joby.training,Flight Operations,Employee,2023-11-22,0
+41,kathryn.ryan41,Kathryn,Ryan,kathryn.ryan@joby.training,Flight Operations,Technician,2025-09-29,0
+42,alyssa.smith42,Alyssa,Smith,alyssa.smith@joby.training,Flight Operations,Technician,2024-05-25,0
+43,andrew.hickman43,Andrew,Hickman,andrew.hickman@joby.training,Flight Operations,Manager,2026-01-15,0
+44,marie.parker44,Marie,Parker,marie.parker@joby.training,Flight Operations,Employee,2023-08-11,0
+45,natalie.arroyo45,Natalie,Arroyo,natalie.arroyo@joby.training,Flight Operations,Employee,2023-09-10,0
+46,todd.jones46,Todd,Jones,todd.jones@joby.training,Engineering & Certification,Manager,2025-09-09,0
+47,katie.anderson47,Katie,Anderson,katie.anderson@joby.training,Engineering & Certification,Technician,2024-11-05,0
+48,andrea.baker48,Andrea,Baker,andrea.baker@joby.training,Engineering & Certification,Employee,2026-01-08,0
+49,rodney.lewis49,Rodney,Lewis,rodney.lewis@joby.training,Engineering & Certification,Manager,2025-01-13,0
+50,jessica.harris50,Jessica,Harris,jessica.harris@joby.training,Engineering & Certification,Employee,2024-05-12,0
+51,wanda.santos51,Wanda,Santos,wanda.santos@joby.training,Engineering & Certification,Analyst,2024-09-26,0
+52,zachary.martinez52,Zachary,Martinez,zachary.martinez@joby.training,Engineering & Certification,Technician,2024-02-08,0
+53,matthew.chapman53,Matthew,Chapman,matthew.chapman@joby.training,Engineering & Certification,Analyst,2024-02-13,0
+54,jeffrey.jones54,Jeffrey,Jones,jeffrey.jones@joby.training,Engineering & Certification,Technician,2025-04-22,0
+55,jeremy.whitehead55,Jeremy,Whitehead,jeremy.whitehead@joby.training,Engineering & Certification,Manager,2025-12-26,0
+56,chad.young56,Chad,Young,chad.young@joby.training,Engineering & Certification,Technician,2025-06-02,0
+57,jason.anderson57,Jason,Anderson,jason.anderson@joby.training,Engineering & Certification,Technician,2026-03-18,0
+58,ashley.kennedy58,Ashley,Kennedy,ashley.kennedy@joby.training,Engineering & Certification,Manager,2025-10-05,0
+59,lindsey.lee59,Lindsey,Lee,lindsey.lee@joby.training,Engineering & Certification,Technician,2023-09-22,0
+60,ryan.henderson60,Ryan,Henderson,ryan.henderson@joby.training,Engineering & Certification,Employee,2024-10-27,0
+61,jessica.nunez61,Jessica,Nunez,jessica.nunez@joby.training,Engineering & Certification,Manager,2026-05-09,0
+62,corey.powell62,Corey,Powell,corey.powell@joby.training,Engineering & Certification,Manager,2024-06-11,0
+63,michelle.wright63,Michelle,Wright,michelle.wright@joby.training,Engineering & Certification,Manager,2024-01-01,0
+64,shane.henderson64,Shane,Henderson,shane.henderson@joby.training,Engineering & Certification,Analyst,2024-04-06,0
+65,john.leblanc65,John,Leblanc,john.leblanc@joby.training,Engineering & Certification,Analyst,2024-10-01,0
+66,michelle.pierce66,Michelle,Pierce,michelle.pierce@joby.training,Engineering & Certification,Technician,2023-08-03,0
+67,yvette.huff67,Yvette,Huff,yvette.huff@joby.training,Engineering & Certification,Manager,2026-04-23,0
+68,sara.allison68,Sara,Allison,sara.allison@joby.training,Engineering & Certification,Technician,2023-12-06,0
+69,todd.lewis69,Todd,Lewis,todd.lewis@joby.training,Engineering & Certification,Employee,2024-08-16,0
+70,brian.gray70,Brian,Gray,brian.gray@joby.training,Engineering & Certification,Manager,2026-05-11,0
+71,joseph.bowers71,Joseph,Bowers,joseph.bowers@joby.training,Engineering & Certification,Employee,2024-10-14,0
+72,rodney.bernard72,Rodney,Bernard,rodney.bernard@joby.training,Engineering & Certification,Technician,2026-05-22,0
+73,angela.higgins73,Angela,Higgins,angela.higgins@joby.training,Engineering & Certification,Analyst,2023-11-24,0
+74,kenneth.novak74,Kenneth,Novak,kenneth.novak@joby.training,Engineering & Certification,Technician,2025-02-25,0
+75,amy.adkins75,Amy,Adkins,amy.adkins@joby.training,Engineering & Certification,Employee,2023-08-10,0
+76,breanna.shaw76,Breanna,Shaw,breanna.shaw@joby.training,Engineering & Certification,Manager,2025-12-18,0
+77,eric.yu77,Eric,Yu,eric.yu@joby.training,Engineering & Certification,Technician,2023-09-04,0
+78,jacob.larson78,Jacob,Larson,jacob.larson@joby.training,Engineering & Certification,Manager,2025-06-09,0
+79,joe.wilson79,Joe,Wilson,joe.wilson@joby.training,Engineering & Certification,Analyst,2026-01-28,0
+80,john.wheeler80,John,Wheeler,john.wheeler@joby.training,Engineering & Certification,Analyst,2025-04-10,0
+81,robert.silva81,Robert,Silva,robert.silva@joby.training,Engineering & Certification,Analyst,2024-12-26,0
+82,sarah.harris82,Sarah,Harris,sarah.harris@joby.training,Engineering & Certification,Manager,2025-07-23,0
+83,john.foster83,John,Foster,john.foster@joby.training,Engineering & Certification,Technician,2025-06-05,0
+84,kevin.stewart84,Kevin,Stewart,kevin.stewart@joby.training,Engineering & Certification,Manager,2025-08-31,0
+85,charles.ellis85,Charles,Ellis,charles.ellis@joby.training,Engineering & Certification,Manager,2026-05-25,0
+86,wendy.jones86,Wendy,Jones,wendy.jones@joby.training,Engineering & Certification,Technician,2024-01-26,0
+87,joseph.mahoney87,Joseph,Mahoney,joseph.mahoney@joby.training,Engineering & Certification,Analyst,2026-01-18,0
+88,natasha.wood88,Natasha,Wood,natasha.wood@joby.training,Engineering & Certification,Analyst,2023-11-27,0
+89,martha.warner89,Martha,Warner,martha.warner@joby.training,Engineering & Certification,Technician,2025-04-01,0
+90,vanessa.valdez90,Vanessa,Valdez,vanessa.valdez@joby.training,Engineering & Certification,Manager,2023-06-18,0
+91,lisa.evans91,Lisa,Evans,lisa.evans@joby.training,Engineering & Certification,Manager,2025-05-27,0
+92,sheila.taylor92,Sheila,Taylor,sheila.taylor@joby.training,Engineering & Certification,Analyst,2023-10-12,0
+93,daniel.tran93,Daniel,Tran,daniel.tran@joby.training,Engineering & Certification,Employee,2024-03-30,0
+94,cassandra.robbins94,Cassandra,Robbins,cassandra.robbins@joby.training,Engineering & Certification,Employee,2024-01-16,0
+95,cynthia.baker95,Cynthia,Baker,cynthia.baker@joby.training,Engineering & Certification,Employee,2024-11-19,0
+96,rebecca.mathis96,Rebecca,Mathis,rebecca.mathis@joby.training,Engineering & Certification,Manager,2023-09-17,0
+97,rodney.hill97,Rodney,Hill,rodney.hill@joby.training,Engineering & Certification,Manager,2023-06-13,0
+98,kellie.walsh98,Kellie,Walsh,kellie.walsh@joby.training,Engineering & Certification,Analyst,2024-03-19,0
+99,joyce.arnold99,Joyce,Arnold,joyce.arnold@joby.training,Engineering & Certification,Employee,2024-09-14,0
+100,alec.jones100,Alec,Jones,alec.jones@joby.training,Engineering & Certification,Analyst,2026-01-20,0
+101,rebecca.gardner101,Rebecca,Gardner,rebecca.gardner@joby.training,Engineering & Certification,Analyst,2025-11-29,0
+102,brandi.hernandez102,Brandi,Hernandez,brandi.hernandez@joby.training,Engineering & Certification,Analyst,2023-10-25,0
+103,kyle.nolan103,Kyle,Nolan,kyle.nolan@joby.training,Engineering & Certification,Technician,2025-10-18,0
+104,michelle.nolan104,Michelle,Nolan,michelle.nolan@joby.training,Engineering & Certification,Employee,2024-01-23,0
+105,john.garcia105,John,Garcia,john.garcia@joby.training,Engineering & Certification,Employee,2025-10-01,0
+106,nicole.russell106,Nicole,Russell,nicole.russell@joby.training,Manufacturing & Quality,Technician,2025-04-11,0
+107,eric.spears107,Eric,Spears,eric.spears@joby.training,Manufacturing & Quality,Technician,2025-12-31,0
+108,theresa.cochran108,Theresa,Cochran,theresa.cochran@joby.training,Manufacturing & Quality,Employee,2026-01-18,0
+109,angel.doyle109,Angel,Doyle,angel.doyle@joby.training,Manufacturing & Quality,Technician,2024-06-03,0
+110,sarah.pham110,Sarah,Pham,sarah.pham@joby.training,Manufacturing & Quality,Analyst,2025-12-30,0
+111,lisa.adams111,Lisa,Adams,lisa.adams@joby.training,Manufacturing & Quality,Manager,2025-10-08,0
+112,daniel.brennan112,Daniel,Brennan,daniel.brennan@joby.training,Manufacturing & Quality,Analyst,2025-12-24,0
+113,jeffrey.velasquez113,Jeffrey,Velasquez,jeffrey.velasquez@joby.training,Manufacturing & Quality,Employee,2024-10-20,0
+114,kevin.pope114,Kevin,Pope,kevin.pope@joby.training,Manufacturing & Quality,Technician,2024-02-11,0
+115,andrew.lee115,Andrew,Lee,andrew.lee@joby.training,Manufacturing & Quality,Manager,2024-05-30,0
+116,michelle.rasmussen116,Michelle,Rasmussen,michelle.rasmussen@joby.training,Manufacturing & Quality,Employee,2024-04-07,0
+117,darlene.ross117,Darlene,Ross,darlene.ross@joby.training,Manufacturing & Quality,Technician,2026-05-06,0
+118,amanda.crosby118,Amanda,Crosby,amanda.crosby@joby.training,Manufacturing & Quality,Manager,2023-10-12,0
+119,tara.white119,Tara,White,tara.white@joby.training,Manufacturing & Quality,Manager,2026-04-16,0
+120,joseph.rodriguez120,Joseph,Rodriguez,joseph.rodriguez@joby.training,Manufacturing & Quality,Technician,2024-09-22,0
+121,jessica.edwards121,Jessica,Edwards,jessica.edwards@joby.training,Manufacturing & Quality,Manager,2025-03-26,0
+122,william.cruz122,William,Cruz,william.cruz@joby.training,Manufacturing & Quality,Employee,2025-02-22,0
+123,jonathan.fletcher123,Jonathan,Fletcher,jonathan.fletcher@joby.training,Manufacturing & Quality,Technician,2023-06-11,0
+124,sara.ryan124,Sara,Ryan,sara.ryan@joby.training,Manufacturing & Quality,Analyst,2025-07-27,0
+125,judy.lambert125,Judy,Lambert,judy.lambert@joby.training,Manufacturing & Quality,Employee,2024-07-08,0
+126,chad.beck126,Chad,Beck,chad.beck@joby.training,Manufacturing & Quality,Employee,2024-06-01,0
+127,lee.charles127,Lee,Charles,lee.charles@joby.training,Manufacturing & Quality,Technician,2025-07-27,0
+128,kevin.parker128,Kevin,Parker,kevin.parker@joby.training,Manufacturing & Quality,Technician,2024-08-24,0
+129,richard.phillips129,Richard,Phillips,richard.phillips@joby.training,Manufacturing & Quality,Manager,2023-10-25,0
+130,robert.bentley130,Robert,Bentley,robert.bentley@joby.training,Manufacturing & Quality,Employee,2025-06-11,0
+131,raven.gilbert131,Raven,Gilbert,raven.gilbert@joby.training,Manufacturing & Quality,Manager,2024-04-30,0
+132,amy.smith132,Amy,Smith,amy.smith@joby.training,Manufacturing & Quality,Employee,2024-04-15,0
+133,russell.carpenter133,Russell,Carpenter,russell.carpenter@joby.training,Manufacturing & Quality,Employee,2025-05-18,0
+134,steven.ramos134,Steven,Ramos,steven.ramos@joby.training,Manufacturing & Quality,Analyst,2024-01-27,0
+135,thomas.santana135,Thomas,Santana,thomas.santana@joby.training,Manufacturing & Quality,Employee,2025-10-18,0
+136,gene.miller136,Gene,Miller,gene.miller@joby.training,Manufacturing & Quality,Manager,2024-12-18,0
+137,cynthia.rogers137,Cynthia,Rogers,cynthia.rogers@joby.training,Manufacturing & Quality,Manager,2025-11-11,0
+138,karen.chambers138,Karen,Chambers,karen.chambers@joby.training,Manufacturing & Quality,Analyst,2024-02-08,0
+139,james.johnson139,James,Johnson,james.johnson@joby.training,Manufacturing & Quality,Manager,2024-02-29,0
+140,thomas.atkinson140,Thomas,Atkinson,thomas.atkinson@joby.training,Manufacturing & Quality,Technician,2023-08-27,0
+141,robert.soto141,Robert,Soto,robert.soto@joby.training,Manufacturing & Quality,Analyst,2024-01-06,0
+142,heather.snyder142,Heather,Snyder,heather.snyder@joby.training,Manufacturing & Quality,Manager,2024-02-28,0
+143,diana.smith143,Diana,Smith,diana.smith@joby.training,Manufacturing & Quality,Manager,2025-08-30,0
+144,kayla.rodriguez144,Kayla,Rodriguez,kayla.rodriguez@joby.training,Manufacturing & Quality,Technician,2024-09-12,0
+145,gregory.rubio145,Gregory,Rubio,gregory.rubio@joby.training,Manufacturing & Quality,Analyst,2024-12-21,0
+146,brent.wright146,Brent,Wright,brent.wright@joby.training,Manufacturing & Quality,Technician,2025-12-13,0
+147,stephen.solis147,Stephen,Solis,stephen.solis@joby.training,Manufacturing & Quality,Analyst,2025-06-01,0
+148,vanessa.larson148,Vanessa,Larson,vanessa.larson@joby.training,Manufacturing & Quality,Analyst,2026-04-02,0
+149,patricia.salazar149,Patricia,Salazar,patricia.salazar@joby.training,Manufacturing & Quality,Employee,2025-07-27,0
+150,william.rivas150,William,Rivas,william.rivas@joby.training,Manufacturing & Quality,Manager,2025-01-22,0
+151,phyllis.manning151,Phyllis,Manning,phyllis.manning@joby.training,Manufacturing & Quality,Manager,2024-11-04,0
+152,jonathon.wright152,Jonathon,Wright,jonathon.wright@joby.training,Manufacturing & Quality,Employee,2025-04-29,0
+153,katie.boyd153,Katie,Boyd,katie.boyd@joby.training,Manufacturing & Quality,Technician,2025-04-18,0
+154,joshua.jones154,Joshua,Jones,joshua.jones@joby.training,Manufacturing & Quality,Employee,2024-04-14,0
+155,joseph.flores155,Joseph,Flores,joseph.flores@joby.training,Manufacturing & Quality,Manager,2025-01-14,0
+156,devon.hall156,Devon,Hall,devon.hall@joby.training,Manufacturing & Quality,Manager,2025-06-29,0
+157,jasmine.brown157,Jasmine,Brown,jasmine.brown@joby.training,Manufacturing & Quality,Employee,2024-08-24,0
+158,amy.perry158,Amy,Perry,amy.perry@joby.training,Manufacturing & Quality,Employee,2024-01-19,0
+159,robert.stein159,Robert,Stein,robert.stein@joby.training,Manufacturing & Quality,Employee,2025-03-02,0
+160,heather.gates160,Heather,Gates,heather.gates@joby.training,Manufacturing & Quality,Manager,2025-09-15,0
+161,omar.smith161,Omar,Smith,omar.smith@joby.training,Manufacturing & Quality,Employee,2024-06-24,0
+162,karen.castaneda162,Karen,Castaneda,karen.castaneda@joby.training,Manufacturing & Quality,Employee,2026-04-06,0
+163,robert.adkins163,Robert,Adkins,robert.adkins@joby.training,Manufacturing & Quality,Technician,2025-01-20,0
+164,carrie.walker164,Carrie,Walker,carrie.walker@joby.training,Manufacturing & Quality,Employee,2024-02-02,0
+165,ryan.johnson165,Ryan,Johnson,ryan.johnson@joby.training,Manufacturing & Quality,Manager,2024-06-07,0
+166,erin.powell166,Erin,Powell,erin.powell@joby.training,Manufacturing & Quality,Technician,2023-12-05,0
+167,tanner.anderson167,Tanner,Anderson,tanner.anderson@joby.training,Manufacturing & Quality,Analyst,2025-04-13,0
+168,anthony.long168,Anthony,Long,anthony.long@joby.training,Manufacturing & Quality,Manager,2025-02-09,0
+169,anthony.day169,Anthony,Day,anthony.day@joby.training,Manufacturing & Quality,Manager,2023-11-03,0
+170,steven.williams170,Steven,Williams,steven.williams@joby.training,Manufacturing & Quality,Analyst,2024-07-24,0
+171,jason.murphy171,Jason,Murphy,jason.murphy@joby.training,Manufacturing & Quality,Manager,2025-09-10,0
+172,nicholas.walton172,Nicholas,Walton,nicholas.walton@joby.training,Manufacturing & Quality,Analyst,2025-11-26,0
+173,johnny.miller173,Johnny,Miller,johnny.miller@joby.training,Manufacturing & Quality,Analyst,2023-06-30,0
+174,amber.cooke174,Amber,Cooke,amber.cooke@joby.training,Manufacturing & Quality,Manager,2024-06-22,0
+175,debra.harrington175,Debra,Harrington,debra.harrington@joby.training,Manufacturing & Quality,Employee,2025-05-15,0
+176,karen.herring176,Karen,Herring,karen.herring@joby.training,Manufacturing & Quality,Employee,2024-01-11,0
+177,andrew.hernandez177,Andrew,Hernandez,andrew.hernandez@joby.training,Manufacturing & Quality,Analyst,2023-10-24,0
+178,elizabeth.elliott178,Elizabeth,Elliott,elizabeth.elliott@joby.training,Manufacturing & Quality,Technician,2024-01-31,0
+179,holly.wang179,Holly,Wang,holly.wang@joby.training,Manufacturing & Quality,Analyst,2023-12-08,0
+180,catherine.adkins180,Catherine,Adkins,catherine.adkins@joby.training,Manufacturing & Quality,Analyst,2023-10-11,0
+181,lori.oconnell181,Lori,Oconnell,lori.oconnell@joby.training,Manufacturing & Quality,Analyst,2023-10-04,0
+182,anthony.collins182,Anthony,Collins,anthony.collins@joby.training,Manufacturing & Quality,Employee,2025-06-11,0
+183,susan.sanders183,Susan,Sanders,susan.sanders@joby.training,Manufacturing & Quality,Employee,2025-07-22,0
+184,charles.vaughn184,Charles,Vaughn,charles.vaughn@joby.training,Manufacturing & Quality,Employee,2025-04-18,0
+185,curtis.barton185,Curtis,Barton,curtis.barton@joby.training,Manufacturing & Quality,Analyst,2025-12-16,0
+186,caroline.martinez186,Caroline,Martinez,caroline.martinez@joby.training,Safety & Compliance,Technician,2026-05-09,0
+187,kimberly.reed187,Kimberly,Reed,kimberly.reed@joby.training,Safety & Compliance,Employee,2024-09-15,0
+188,mitchell.hunter188,Mitchell,Hunter,mitchell.hunter@joby.training,Safety & Compliance,Manager,2024-06-13,0
+189,melissa.short189,Melissa,Short,melissa.short@joby.training,Safety & Compliance,Manager,2023-10-02,0
+190,susan.reid190,Susan,Reid,susan.reid@joby.training,Safety & Compliance,Manager,2025-11-22,0
+191,jasmine.graham191,Jasmine,Graham,jasmine.graham@joby.training,Safety & Compliance,Analyst,2025-08-11,0
+192,tammy.nelson192,Tammy,Nelson,tammy.nelson@joby.training,Safety & Compliance,Manager,2025-10-31,0
+193,amanda.webb193,Amanda,Webb,amanda.webb@joby.training,Safety & Compliance,Analyst,2024-09-23,0
+194,jessica.adams194,Jessica,Adams,jessica.adams@joby.training,Safety & Compliance,Manager,2025-12-17,0
+195,mariah.miller195,Mariah,Miller,mariah.miller@joby.training,Safety & Compliance,Technician,2026-01-18,0
+196,john.marshall196,John,Marshall,john.marshall@joby.training,Safety & Compliance,Analyst,2025-03-31,0
+197,nicholas.johnson197,Nicholas,Johnson,nicholas.johnson@joby.training,Safety & Compliance,Manager,2025-12-16,0
+198,hunter.lewis198,Hunter,Lewis,hunter.lewis@joby.training,Safety & Compliance,Employee,2025-10-20,0
+199,matthew.beard199,Matthew,Beard,matthew.beard@joby.training,Safety & Compliance,Analyst,2025-07-07,0
+200,joshua.smith200,Joshua,Smith,joshua.smith@joby.training,Safety & Compliance,Employee,2026-03-31,0
+201,christopher.cortez201,Christopher,Cortez,christopher.cortez@joby.training,Safety & Compliance,Employee,2024-11-19,0
+202,katherine.vaughn202,Katherine,Vaughn,katherine.vaughn@joby.training,Safety & Compliance,Employee,2025-05-08,0
+203,travis.mcguire203,Travis,Mcguire,travis.mcguire@joby.training,Safety & Compliance,Employee,2023-09-18,0
+204,jeffrey.holt204,Jeffrey,Holt,jeffrey.holt@joby.training,Safety & Compliance,Manager,2024-05-06,0
+205,bonnie.kennedy205,Bonnie,Kennedy,bonnie.kennedy@joby.training,Safety & Compliance,Manager,2025-01-04,0
+206,ronald.reese206,Ronald,Reese,ronald.reese@joby.training,Safety & Compliance,Analyst,2024-06-01,0
+207,jacqueline.nelson207,Jacqueline,Nelson,jacqueline.nelson@joby.training,Safety & Compliance,Analyst,2024-03-08,0
+208,david.lee208,David,Lee,david.lee@joby.training,Safety & Compliance,Analyst,2023-10-17,0
+209,amanda.gill209,Amanda,Gill,amanda.gill@joby.training,Safety & Compliance,Manager,2023-12-27,0
+210,javier.washington210,Javier,Washington,javier.washington@joby.training,Safety & Compliance,Analyst,2025-08-02,0
+211,tiffany.warren211,Tiffany,Warren,tiffany.warren@joby.training,People & HR,Employee,2024-04-11,0
+212,craig.lee212,Craig,Lee,craig.lee@joby.training,People & HR,Manager,2024-02-11,0
+213,harry.smith213,Harry,Smith,harry.smith@joby.training,People & HR,Analyst,2025-01-07,0
+214,joshua.mccann214,Joshua,Mccann,joshua.mccann@joby.training,People & HR,Employee,2025-01-28,0
+215,heidi.martinez215,Heidi,Martinez,heidi.martinez@joby.training,People & HR,Analyst,2026-01-04,0
+216,travis.salas216,Travis,Salas,travis.salas@joby.training,People & HR,Technician,2025-02-20,0
+217,taylor.alexander217,Taylor,Alexander,taylor.alexander@joby.training,People & HR,Analyst,2023-12-26,0
+218,brett.everett218,Brett,Everett,brett.everett@joby.training,People & HR,Technician,2024-11-07,0
+219,lynn.morales219,Lynn,Morales,lynn.morales@joby.training,People & HR,Analyst,2023-08-29,0
+220,crystal.brown220,Crystal,Brown,crystal.brown@joby.training,People & HR,Analyst,2023-11-18,0
+221,anna.torres221,Anna,Torres,anna.torres@joby.training,People & HR,Manager,2026-05-20,0
+222,david.duran222,David,Duran,david.duran@joby.training,People & HR,Manager,2025-03-27,0
+223,krystal.perez223,Krystal,Perez,krystal.perez@joby.training,People & HR,Technician,2024-12-26,0
+224,shannon.ramos224,Shannon,Ramos,shannon.ramos@joby.training,People & HR,Manager,2025-12-26,0
+225,veronica.torres225,Veronica,Torres,veronica.torres@joby.training,People & HR,Employee,2025-04-11,0
+226,chelsea.singh226,Chelsea,Singh,chelsea.singh@joby.training,People & HR,Employee,2026-03-31,0
+227,jared.clark227,Jared,Clark,jared.clark@joby.training,People & HR,Technician,2025-05-24,0
+228,eric.thompson228,Eric,Thompson,eric.thompson@joby.training,People & HR,Employee,2023-08-30,0
+229,aaron.hayes229,Aaron,Hayes,aaron.hayes@joby.training,People & HR,Employee,2025-03-13,0
+230,kelly.hall230,Kelly,Hall,kelly.hall@joby.training,People & HR,Analyst,2025-07-13,0
+231,jacqueline.gibson231,Jacqueline,Gibson,jacqueline.gibson@joby.training,Software & Data,Manager,2025-06-22,0
+232,sandra.french232,Sandra,French,sandra.french@joby.training,Software & Data,Employee,2025-04-16,0
+233,donna.peck233,Donna,Peck,donna.peck@joby.training,Software & Data,Employee,2024-09-12,0
+234,amy.holland234,Amy,Holland,amy.holland@joby.training,Software & Data,Manager,2026-02-16,0
+235,margaret.jones235,Margaret,Jones,margaret.jones@joby.training,Software & Data,Employee,2023-12-06,0
+236,kyle.curry236,Kyle,Curry,kyle.curry@joby.training,Software & Data,Employee,2025-02-14,0
+237,keith.martinez237,Keith,Martinez,keith.martinez@joby.training,Software & Data,Manager,2025-06-24,0
+238,holly.bender238,Holly,Bender,holly.bender@joby.training,Software & Data,Analyst,2024-12-02,0
+239,troy.miller239,Troy,Miller,troy.miller@joby.training,Software & Data,Employee,2023-07-23,0
+240,ryan.morris240,Ryan,Morris,ryan.morris@joby.training,Software & Data,Manager,2024-03-06,0
+241,christopher.hayden241,Christopher,Hayden,christopher.hayden@joby.training,Software & Data,Employee,2025-11-30,0
+242,barbara.sampson242,Barbara,Sampson,barbara.sampson@joby.training,Software & Data,Employee,2026-05-26,0
+243,emily.adams243,Emily,Adams,emily.adams@joby.training,Software & Data,Analyst,2023-07-23,0
+244,katelyn.ruiz244,Katelyn,Ruiz,katelyn.ruiz@joby.training,Software & Data,Technician,2025-05-14,0
+245,sabrina.white245,Sabrina,White,sabrina.white@joby.training,Software & Data,Technician,2025-03-04,0
+246,cynthia.vasquez246,Cynthia,Vasquez,cynthia.vasquez@joby.training,Software & Data,Manager,2023-09-16,0
+247,michael.cook247,Michael,Cook,michael.cook@joby.training,Software & Data,Technician,2025-06-04,0
+248,mia.rivera248,Mia,Rivera,mia.rivera@joby.training,Software & Data,Manager,2025-06-29,0
+249,keith.landry249,Keith,Landry,keith.landry@joby.training,Software & Data,Technician,2025-11-06,0
+250,andrea.gibson250,Andrea,Gibson,andrea.gibson@joby.training,Software & Data,Analyst,2024-05-15,0
+251,marcus.cordova251,Marcus,Cordova,marcus.cordova@joby.training,Software & Data,Manager,2024-08-20,0
+252,xavier.travis252,Xavier,Travis,xavier.travis@joby.training,Software & Data,Technician,2025-05-21,0
+253,amy.gutierrez253,Amy,Gutierrez,amy.gutierrez@joby.training,Software & Data,Analyst,2023-12-29,0
+254,michael.avila254,Michael,Avila,michael.avila@joby.training,Software & Data,Technician,2025-04-16,0
+255,kathleen.harris255,Kathleen,Harris,kathleen.harris@joby.training,Software & Data,Employee,2025-01-24,0
+256,sara.kim256,Sara,Kim,sara.kim@joby.training,Software & Data,Employee,2025-07-04,0
+257,david.dudley257,David,Dudley,david.dudley@joby.training,Software & Data,Analyst,2025-03-29,0
+258,john.moore258,John,Moore,john.moore@joby.training,Software & Data,Employee,2025-01-26,0
+259,andrea.davis259,Andrea,Davis,andrea.davis@joby.training,Software & Data,Employee,2026-05-18,0
+260,robin.murray260,Robin,Murray,robin.murray@joby.training,Software & Data,Manager,2023-10-15,0
+261,marilyn.jimenez261,Marilyn,Jimenez,marilyn.jimenez@joby.training,Software & Data,Technician,2025-07-24,0
+262,william.hill262,William,Hill,william.hill@joby.training,Software & Data,Manager,2025-11-29,0
+263,tina.sanchez263,Tina,Sanchez,tina.sanchez@joby.training,Software & Data,Technician,2025-01-26,0
+264,patrick.weeks264,Patrick,Weeks,patrick.weeks@joby.training,Software & Data,Employee,2024-12-10,0
+265,natasha.shields265,Natasha,Shields,natasha.shields@joby.training,Software & Data,Manager,2024-04-03,0
+266,kristy.perry266,Kristy,Perry,kristy.perry@joby.training,Corporate & Legal,Technician,2026-03-16,0
+267,william.hoover267,William,Hoover,william.hoover@joby.training,Corporate & Legal,Technician,2024-04-11,0
+268,kenneth.matthews268,Kenneth,Matthews,kenneth.matthews@joby.training,Corporate & Legal,Manager,2026-05-25,0
+269,tracy.hernandez269,Tracy,Hernandez,tracy.hernandez@joby.training,Corporate & Legal,Analyst,2025-01-12,0
+270,michael.arnold270,Michael,Arnold,michael.arnold@joby.training,Corporate & Legal,Technician,2025-01-17,0
+271,stanley.morris271,Stanley,Morris,stanley.morris@joby.training,Corporate & Legal,Employee,2023-12-31,0
+272,heidi.armstrong272,Heidi,Armstrong,heidi.armstrong@joby.training,Corporate & Legal,Technician,2024-02-17,0
+273,kimberly.williams273,Kimberly,Williams,kimberly.williams@joby.training,Corporate & Legal,Employee,2025-08-23,0
+274,janet.shepherd274,Janet,Shepherd,janet.shepherd@joby.training,Corporate & Legal,Manager,2024-07-31,0
+275,elizabeth.hoover275,Elizabeth,Hoover,elizabeth.hoover@joby.training,Corporate & Legal,Technician,2026-05-06,0
+276,tyler.johnson276,Tyler,Johnson,tyler.johnson@joby.training,Corporate & Legal,Employee,2024-12-04,0
+277,brittany.kane277,Brittany,Kane,brittany.kane@joby.training,Corporate & Legal,Employee,2026-01-10,0
+278,scott.fox278,Scott,Fox,scott.fox@joby.training,Corporate & Legal,Manager,2024-10-16,0
+279,jennifer.ortiz279,Jennifer,Ortiz,jennifer.ortiz@joby.training,Corporate & Legal,Technician,2025-05-18,0
+280,eric.harrison280,Eric,Harrison,eric.harrison@joby.training,Corporate & Legal,Technician,2026-04-23,0

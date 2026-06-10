@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+seed/.venv/
+.env
+
+# Data (keep processed sample CSVs; ignore large/local DB if regenerated)
+data/lms.db
+*.db-journal
+
+# Power BI local cache
+powerbi/*.pbix
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker volumes
+docker/moodledata/
+docker/mysqldata/
+
+# IDE
+.idea/
+.vscode/
