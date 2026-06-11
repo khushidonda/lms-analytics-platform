@@ -1,51 +1,31 @@
 completion_month,category,completions,running_total_completions
-2025-06,Elective,11,11
-2025-07,Elective,16,27
-2025-08,Elective,13,40
-2025-09,Elective,24,64
-2025-10,Elective,18,82
-2025-11,Elective,23,105
-2025-12,Elective,18,123
-2026-01,Elective,21,144
-2026-02,Elective,16,160
-2026-03,Elective,31,191
-2026-04,Elective,27,218
-2026-05,Elective,15,233
-2026-06,Elective,27,260
-2025-06,Mandatory,5,5
-2025-07,Mandatory,10,15
-2025-08,Mandatory,16,31
-2025-09,Mandatory,19,50
-2025-10,Mandatory,24,74
-2025-11,Mandatory,36,110
-2025-12,Mandatory,39,149
-2026-01,Mandatory,47,196
-2026-02,Mandatory,43,239
-2026-03,Mandatory,49,288
-2026-04,Mandatory,67,355
-2026-05,Mandatory,60,415
-2026-06,Mandatory,73,488
-2026-07,Mandatory,71,559
-2026-08,Mandatory,68,627
-2026-09,Mandatory,57,684
-2026-10,Mandatory,46,730
-2026-11,Mandatory,43,773
-2026-12,Mandatory,36,809
-2027-01,Mandatory,38,847
-2027-02,Mandatory,19,866
-2027-03,Mandatory,20,886
-2027-04,Mandatory,11,897
-2027-05,Mandatory,7,904
-2025-06,Onboarding,11,11
-2025-07,Onboarding,12,23
-2025-08,Onboarding,12,35
-2025-09,Onboarding,15,50
-2025-10,Onboarding,26,76
-2025-11,Onboarding,11,87
-2025-12,Onboarding,24,111
-2026-01,Onboarding,21,132
-2026-02,Onboarding,23,155
-2026-03,Onboarding,21,176
-2026-04,Onboarding,28,204
-2026-05,Onboarding,30,234
-2026-06,Onboarding,25,259
+2025-09,Core,2,2
+2025-10,Core,9,11
+2025-11,Core,23,34
+2025-12,Core,16,50
+2026-01,Core,21,71
+2026-02,Core,17,88
+2026-03,Core,35,123
+2026-04,Core,32,155
+2026-05,Core,39,194
+2026-06,Core,39,233
+2026-07,Core,19,252
+2026-08,Core,8,260
+2025-11,Elective,2,2
+2025-12,Elective,2,4
+2026-02,Elective,1,5
+2026-03,Elective,4,9
+2026-04,Elective,2,11
+2026-05,Elective,3,14
+2026-07,Elective,1,15
+2025-09,Gen Ed,1,1
+2025-10,Gen Ed,4,5
+2025-11,Gen Ed,4,9
+2025-12,Gen Ed,5,14
+2026-01,Gen Ed,7,21
+2026-02,Gen Ed,12,33
+2026-03,Gen Ed,8,41
+2026-04,Gen Ed,8,49
+2026-05,Gen Ed,10,59
+2026-06,Gen Ed,23,82
+2026-07,Gen Ed,1,83

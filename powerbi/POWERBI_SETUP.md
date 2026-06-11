@@ -1,31 +1,31 @@
-# Power BI Dashboard Setup Guide
+# Power BI Dashboard — Class Project Setup
 
-Build a 5-page dashboard using the pre-computed CSVs in `data/processed/`.
+**Course:** Data Visualization (SJSU)  
+**Deliverable:** 3-page interactive dashboard
 
-## Step 1: Import Data
+## Step 1: Import CSVs
 
-Open Power BI Desktop → **Get Data** → **Text/CSV** and import:
+Power BI Desktop → **Get Data** → **Text/CSV**:
 
-| File | Purpose |
+| File | Use for |
 |------|---------|
-| `05_compliance_score.csv` | Department compliance KPIs |
-| `01_enrollment_summary.csv` | Enrollment/completion matrix |
-| `02_overdue_compliance.csv` | Overdue employee drill-down |
-| `03_participation_trend.csv` | Monthly trend lines |
-| `04_data_validation.csv` | Data quality log |
-| `mdl_intake_requests.csv` | Intake request tracker |
-| `mdl_user.csv` | Employee dimension |
+| `01_enrollment_summary.csv` | Program × course completion matrix |
+| `02_incomplete_courses.csv` | Students past due on core courses |
+| `03_participation_trend.csv` | Monthly completion trend lines |
+| `05_program_completion_summary.csv` | Program-level KPIs |
+| `mdl_user.csv` | Student dimension (program, cohort) |
 | `mdl_course.csv` | Course dimension |
+| `mdl_grade_grades.csv` | Average grade visuals |
 
-## Step 2: Data Model Relationships
+## Step 2: Relationships
 
 ```
-mdl_user[id] ──< 02_overdue_compliance[employee_id]
+mdl_user[id] ──< 02_incomplete_courses[student_id]
+mdl_user[program] ── 01_enrollment_summary[program]
 mdl_course[fullname] ── 01_enrollment_summary[course_name]
-mdl_user[department] ── 05_compliance_score[department]
 ```
 
-## Step 3: DAX Measures
+## Step 3: DAX measures
 
 ```dax
 Completion Rate % =
@@ -34,64 +34,33 @@ DIVIDE(
     SUM('01_enrollment_summary'[total_enrolled])
 )
 
-Overdue Count =
-COUNTROWS('02_overdue_compliance')
+Past Due Students =
+COUNTROWS('02_incomplete_courses')
+
+Avg Grade =
+AVERAGE(mdl_grade_grades[finalgrade])
 
 Avg Days to Complete =
 AVERAGE('01_enrollment_summary'[avg_days_to_complete])
-
-Fully Compliant Employees =
-CALCULATE(
-    DISTINCTCOUNT('mdl_user'[id]),
-    FILTER(
-        '05_compliance_score',
-        '05_compliance_score'[overdue_count] = 0
-    )
-)
-
-Compliance Risk Level =
-SWITCH(
-    TRUE(),
-    [Completion Rate %] < 0.70, "RED",
-    [Completion Rate %] < 0.90, "YELLOW",
-    "GREEN"
-)
-
-Intake SLA Days =
-AVERAGE(
-    DATEDIFF(
-        'mdl_intake_requests'[created_date],
-        'mdl_intake_requests'[resolved_date],
-        DAY
-    )
-)
 ```
 
-## Step 4: Dashboard Pages
+## Step 4: Three dashboard pages
 
-### Page 1 — Executive Overview
-- KPI cards: Completion Rate %, Overdue Count, Fully Compliant Employees
-- Bar chart: Compliance rate by department (from `05_compliance_score`)
-- Risk badges: RED / YELLOW / GREEN by department
+### Page 1 — Overview
+- KPI cards: total students, overall completion %, past-due count, avg grade
+- Bar chart: completion rate by program
+- Donut: enrollments by course category (Core / Elective / Gen Ed)
 
-### Page 2 — Compliance Matrix
-- Matrix: Department (rows) × Course (columns) → Completion Rate %
-- Conditional formatting: red < 70%, yellow 70–90%, green > 90%
+### Page 2 — Program & Course Detail
+- Matrix: program (rows) × course (columns) → completion %
+- Table: incomplete courses with days past due
+- Conditional formatting: red below 70%, yellow 70–85%, green above 85%
 
-### Page 3 — Participation Trends
-- Line chart: Monthly completions by category (`03_participation_trend`)
-- Running total overlay per category
-
-### Page 4 — Overdue Drill-Down
-- Table: full_name, department, course_name, due_date, days_overdue
-- Slicer: department, course
-- Sort by days_overdue DESC
-
-### Page 5 — Operations & Data Quality
-- Intake request table with status and SLA
-- Data validation check results from `04_data_validation`
-- Open vs Resolved intake count
+### Page 3 — Trends
+- Line chart: monthly completions from `03_participation_trend`
+- Running total by category
+- Slicer: program, course category
 
 ## Step 5: Save
 
-Save as `powerbi/lms_dashboard.pbix` and add screenshots to README.
+Save as `powerbi/learning_engagement_dashboard.pbix` and export screenshots for your course submission.

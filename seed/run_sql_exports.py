@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run all SQL analytics queries and export results to data/processed/."""
+"""Run SQL analytics queries and export results to data/processed/."""
 
 from pathlib import Path
 import sqlite3
@@ -13,10 +13,10 @@ OUT_DIR = ROOT / "data" / "processed"
 
 QUERIES = [
     "01_enrollment_summary.sql",
-    "02_overdue_compliance.sql",
+    "02_incomplete_courses.sql",
     "03_participation_trend.sql",
     "04_data_validation.sql",
-    "05_compliance_score.sql",
+    "05_program_completion_summary.sql",
 ]
 
 
@@ -27,8 +27,7 @@ def main() -> None:
     for filename in QUERIES:
         sql = (SQL_DIR / filename).read_text()
         df = pd.read_sql_query(sql, conn)
-        out_name = filename.replace(".sql", ".csv")
-        out_path = OUT_DIR / out_name
+        out_path = OUT_DIR / filename.replace(".sql", ".csv")
         df.to_csv(out_path, index=False)
         print(f"Wrote {out_path} ({len(df)} rows)")
 

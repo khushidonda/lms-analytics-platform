@@ -1,0 +1,63 @@
+student_id,student_name,email,program,course_name,category,due_date,days_past_due
+9,Susan Rogers,susan.rogers@sjsu.edu,MS Business Analytics,Introduction to Data Visualization,Core,2025-11-12,211
+36,Danielle Rodriguez,danielle.rodriguez@sjsu.edu,MS Data Science,Research Methods,Core,2025-11-16,207
+97,Rodney Hill,rodney.hill@sjsu.edu,MS Applied Data Intelligence,Business Statistics,Core,2025-11-17,206
+115,Andrew Lee,andrew.lee@sjsu.edu,MS Applied Data Intelligence,Research Methods,Core,2025-11-23,200
+16,Jesse Garcia,jesse.garcia@sjsu.edu,MS Business Analytics,Introduction to Data Visualization,Core,2025-12-02,191
+102,Brandi Hernandez,brandi.hernandez@sjsu.edu,MS Applied Data Intelligence,Research Methods,Core,2025-12-03,190
+47,Katie Anderson,katie.anderson@sjsu.edu,MS Data Science,Introduction to Data Visualization,Core,2025-12-07,186
+32,Robert Brown,robert.brown@sjsu.edu,MS Business Analytics,Research Methods,Core,2025-12-11,182
+62,Corey Powell,corey.powell@sjsu.edu,MS Data Science,Research Methods,Core,2025-12-16,177
+20,Jessica Martin,jessica.martin@sjsu.edu,MS Business Analytics,Research Methods,Core,2025-12-17,176
+25,Nancy Edwards,nancy.edwards@sjsu.edu,MS Business Analytics,Business Statistics,Core,2025-12-17,176
+47,Katie Anderson,katie.anderson@sjsu.edu,MS Data Science,Python for Data Analysis,Core,2025-12-17,176
+42,Alyssa Smith,alyssa.smith@sjsu.edu,MS Data Science,Research Methods,Core,2025-12-19,174
+2,Jeffrey Doyle,jeffrey.doyle@sjsu.edu,MS Business Analytics,Business Statistics,Core,2025-12-26,167
+73,Angela Higgins,angela.higgins@sjsu.edu,MS Information Systems,Introduction to Data Visualization,Core,2026-01-02,160
+77,Eric Yu,eric.yu@sjsu.edu,MS Information Systems,Introduction to Data Visualization,Core,2026-01-24,138
+19,Deborah Lynch,deborah.lynch@sjsu.edu,MS Business Analytics,Research Methods,Core,2026-01-25,137
+99,Joyce Arnold,joyce.arnold@sjsu.edu,MS Applied Data Intelligence,Python for Data Analysis,Core,2026-01-30,132
+102,Brandi Hernandez,brandi.hernandez@sjsu.edu,MS Applied Data Intelligence,Introduction to Data Visualization,Core,2026-02-04,127
+10,Colin Abbott,colin.abbott@sjsu.edu,MS Business Analytics,Research Methods,Core,2026-02-10,121
+35,Erin Herrera,erin.herrera@sjsu.edu,MS Data Science,Python for Data Analysis,Core,2026-02-12,119
+78,Jacob Larson,jacob.larson@sjsu.edu,MS Information Systems,Research Methods,Core,2026-02-15,116
+50,Jessica Harris,jessica.harris@sjsu.edu,MS Data Science,Python for Data Analysis,Core,2026-02-22,109
+15,Jeremy Roberts,jeremy.roberts@sjsu.edu,MS Business Analytics,Introduction to Data Visualization,Core,2026-02-27,104
+54,Jeffrey Jones,jeffrey.jones@sjsu.edu,MS Data Science,Python for Data Analysis,Core,2026-02-27,104
+1,Danielle Johnson,danielle.johnson@sjsu.edu,MS Business Analytics,Business Statistics,Core,2026-03-04,99
+23,Jeremy Johnson,jeremy.johnson@sjsu.edu,MS Business Analytics,Business Statistics,Core,2026-03-08,95
+115,Andrew Lee,andrew.lee@sjsu.edu,MS Applied Data Intelligence,Introduction to Data Visualization,Core,2026-03-15,88
+54,Jeffrey Jones,jeffrey.jones@sjsu.edu,MS Data Science,Research Methods,Core,2026-03-16,87
+34,Michelle Smith,michelle.smith@sjsu.edu,MS Data Science,Research Methods,Core,2026-03-16,87
+116,Michelle Rasmussen,michelle.rasmussen@sjsu.edu,MS Applied Data Intelligence,Research Methods,Core,2026-03-19,84
+97,Rodney Hill,rodney.hill@sjsu.edu,MS Applied Data Intelligence,Python for Data Analysis,Core,2026-03-20,83
+69,Todd Lewis,todd.lewis@sjsu.edu,MS Information Systems,Research Methods,Core,2026-03-22,81
+1,Danielle Johnson,danielle.johnson@sjsu.edu,MS Business Analytics,Research Methods,Core,2026-04-05,67
+58,Ashley Kennedy,ashley.kennedy@sjsu.edu,MS Data Science,Research Methods,Core,2026-04-06,66
+7,Lisa Smith,lisa.smith@sjsu.edu,MS Business Analytics,Research Methods,Core,2026-04-09,63
+4,Anthony Robinson,anthony.robinson@sjsu.edu,MS Business Analytics,Introduction to Data Visualization,Core,2026-04-11,61
+75,Amy Adkins,amy.adkins@sjsu.edu,MS Information Systems,Introduction to Data Visualization,Core,2026-04-13,59
+98,Kellie Walsh,kellie.walsh@sjsu.edu,MS Applied Data Intelligence,Introduction to Data Visualization,Core,2026-04-14,58
+103,Kyle Nolan,kyle.nolan@sjsu.edu,MS Applied Data Intelligence,Research Methods,Core,2026-04-15,57
+9,Susan Rogers,susan.rogers@sjsu.edu,MS Business Analytics,Business Statistics,Core,2026-04-22,50
+40,Danielle Lynch,danielle.lynch@sjsu.edu,MS Data Science,Research Methods,Core,2026-04-24,48
+11,Lindsay Blair,lindsay.blair@sjsu.edu,MS Business Analytics,Research Methods,Core,2026-05-02,40
+38,Jose Mason,jose.mason@sjsu.edu,MS Data Science,Introduction to Data Visualization,Core,2026-05-02,40
+7,Lisa Smith,lisa.smith@sjsu.edu,MS Business Analytics,Introduction to Data Visualization,Core,2026-05-05,37
+64,Shane Henderson,shane.henderson@sjsu.edu,MS Information Systems,Research Methods,Core,2026-05-09,33
+21,Veronica Bowman,veronica.bowman@sjsu.edu,MS Business Analytics,Business Statistics,Core,2026-05-14,28
+94,Cassandra Robbins,cassandra.robbins@sjsu.edu,MS Applied Data Intelligence,Research Methods,Core,2026-05-15,27
+59,Lindsey Lee,lindsey.lee@sjsu.edu,MS Data Science,Python for Data Analysis,Core,2026-05-18,24
+96,Rebecca Mathis,rebecca.mathis@sjsu.edu,MS Applied Data Intelligence,Introduction to Data Visualization,Core,2026-05-19,23
+111,Lisa Adams,lisa.adams@sjsu.edu,MS Applied Data Intelligence,Introduction to Data Visualization,Core,2026-05-22,20
+83,John Foster,john.foster@sjsu.edu,MS Information Systems,Introduction to Data Visualization,Core,2026-05-22,20
+41,Kathryn Ryan,kathryn.ryan@sjsu.edu,MS Data Science,Introduction to Data Visualization,Core,2026-05-25,17
+95,Cynthia Baker,cynthia.baker@sjsu.edu,MS Applied Data Intelligence,Research Methods,Core,2026-05-26,16
+43,Andrew Hickman,andrew.hickman@sjsu.edu,MS Data Science,Python for Data Analysis,Core,2026-05-26,16
+108,Theresa Cochran,theresa.cochran@sjsu.edu,MS Applied Data Intelligence,Research Methods,Core,2026-05-30,12
+30,William Davis,william.davis@sjsu.edu,MS Business Analytics,Introduction to Data Visualization,Core,2026-05-30,12
+107,Eric Spears,eric.spears@sjsu.edu,MS Applied Data Intelligence,Introduction to Data Visualization,Core,2026-06-02,9
+17,Cynthia Diaz,cynthia.diaz@sjsu.edu,MS Business Analytics,Research Methods,Core,2026-06-07,4
+89,Martha Warner,martha.warner@sjsu.edu,MS Information Systems,Research Methods,Core,2026-06-07,4
+88,Natasha Wood,natasha.wood@sjsu.edu,MS Information Systems,Research Methods,Core,2026-06-08,3
+8,Helen Peterson,helen.peterson@sjsu.edu,MS Business Analytics,Introduction to Data Visualization,Core,2026-06-09,2

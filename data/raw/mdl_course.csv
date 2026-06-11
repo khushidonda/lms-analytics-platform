@@ -1,10 +1,7 @@
-id,shortname,fullname,category,compliance_required,recert_days
-1,ACAD-INTEG,Academic Integrity & Ethics,Mandatory,1,365.0
-2,CAMPUS-SAFE,Campus Safety Training,Mandatory,1,180.0
-3,FERPA-DATA,Data Privacy & FERPA Compliance,Mandatory,1,365.0
-4,DIVERSITY,Diversity & Inclusion Workshop,Mandatory,1,365.0
-5,LMS-ORIENT,LMS Platform Orientation,Onboarding,1,
-6,SQL-ANALYTICS,SQL for Data Analytics,Elective,0,
-7,POWERBI-101,Power BI Fundamentals,Elective,0,
-8,STATS-METHODS,Statistical Methods for Research,Elective,0,
-9,RES-ETHICS,Research Ethics & IRB Training,Mandatory,1,365.0
+id,shortname,fullname,category,is_core_course,term_days
+1,DATA-VIZ-101,Introduction to Data Visualization,Core,1,90
+2,BUS-STAT-200,Business Statistics,Core,1,90
+3,PY-ANALYTICS,Python for Data Analysis,Core,1,90
+4,RES-METHODS,Research Methods,Core,1,90
+5,INFO-SYS-100,Information Systems Fundamentals,Elective,0,60
+6,ACAD-WRITE,Academic Writing & Communication,Gen Ed,0,45

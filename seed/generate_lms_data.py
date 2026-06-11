@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-Generate synthetic LMS data for the SJSU Learning Analytics college project.
+Generate synthetic online-learning data for the SJSU Data Visualization course project.
 
-Creates a SQLite reporting warehouse mirroring Moodle mdl_* table patterns,
-exports CSVs for Power BI / Databricks, and prints a completion summary.
+Inspired by public "employee training / online learning platform" datasets on Kaggle.
+Creates a SQLite warehouse (Moodle-style table names), CSV exports for Power BI,
+and optional seeding into the local Moodle demo.
 """
 
 from __future__ import annotations
@@ -28,99 +29,64 @@ random.seed(42)
 INSTITUTION = "San Jose State University"
 EMAIL_DOMAIN = "sjsu.edu"
 
-DEPARTMENTS = {
-    "Computer Science": 50,
-    "Business Analytics": 45,
-    "Information Systems": 40,
-    "Data Science": 55,
-    "Engineering": 35,
-    "Health Sciences": 30,
-    "Liberal Arts": 25,
+# Medium-sized dataset: 4 graduate programs × ~30 students
+PROGRAMS = {
+    "MS Business Analytics": 32,
+    "MS Data Science": 30,
+    "MS Information Systems": 28,
+    "MS Applied Data Intelligence": 30,
 }
 
 COURSES = [
     {
-        "shortname": "ACAD-INTEG",
-        "fullname": "Academic Integrity & Ethics",
-        "category": "Mandatory",
-        "compliance_required": 1,
-        "recert_days": 365,
-        "target_departments": None,
+        "shortname": "DATA-VIZ-101",
+        "fullname": "Introduction to Data Visualization",
+        "category": "Core",
+        "is_core_course": 1,
+        "term_days": 90,
+        "target_programs": None,
     },
     {
-        "shortname": "CAMPUS-SAFE",
-        "fullname": "Campus Safety Training",
-        "category": "Mandatory",
-        "compliance_required": 1,
-        "recert_days": 180,
-        "target_departments": None,
+        "shortname": "BUS-STAT-200",
+        "fullname": "Business Statistics",
+        "category": "Core",
+        "is_core_course": 1,
+        "term_days": 90,
+        "target_programs": ["MS Business Analytics", "MS Applied Data Intelligence"],
     },
     {
-        "shortname": "FERPA-DATA",
-        "fullname": "Data Privacy & FERPA Compliance",
-        "category": "Mandatory",
-        "compliance_required": 1,
-        "recert_days": 365,
-        "target_departments": None,
+        "shortname": "PY-ANALYTICS",
+        "fullname": "Python for Data Analysis",
+        "category": "Core",
+        "is_core_course": 1,
+        "term_days": 90,
+        "target_programs": ["MS Data Science", "MS Applied Data Intelligence"],
     },
     {
-        "shortname": "DIVERSITY",
-        "fullname": "Diversity & Inclusion Workshop",
-        "category": "Mandatory",
-        "compliance_required": 1,
-        "recert_days": 365,
-        "target_departments": None,
+        "shortname": "RES-METHODS",
+        "fullname": "Research Methods",
+        "category": "Core",
+        "is_core_course": 1,
+        "term_days": 90,
+        "target_programs": None,
     },
     {
-        "shortname": "LMS-ORIENT",
-        "fullname": "LMS Platform Orientation",
-        "category": "Onboarding",
-        "compliance_required": 1,
-        "recert_days": None,
-        "target_departments": None,
-    },
-    {
-        "shortname": "SQL-ANALYTICS",
-        "fullname": "SQL for Data Analytics",
+        "shortname": "INFO-SYS-100",
+        "fullname": "Information Systems Fundamentals",
         "category": "Elective",
-        "compliance_required": 0,
-        "recert_days": None,
-        "target_departments": None,
+        "is_core_course": 0,
+        "term_days": 60,
+        "target_programs": ["MS Information Systems"],
     },
     {
-        "shortname": "POWERBI-101",
-        "fullname": "Power BI Fundamentals",
-        "category": "Elective",
-        "compliance_required": 0,
-        "recert_days": None,
-        "target_departments": None,
-    },
-    {
-        "shortname": "STATS-METHODS",
-        "fullname": "Statistical Methods for Research",
-        "category": "Elective",
-        "compliance_required": 0,
-        "recert_days": None,
-        "target_departments": ["Data Science", "Business Analytics"],
-    },
-    {
-        "shortname": "RES-ETHICS",
-        "fullname": "Research Ethics & IRB Training",
-        "category": "Mandatory",
-        "compliance_required": 1,
-        "recert_days": 365,
-        "target_departments": ["Health Sciences"],
+        "shortname": "ACAD-WRITE",
+        "fullname": "Academic Writing & Communication",
+        "category": "Gen Ed",
+        "is_core_course": 0,
+        "term_days": 45,
+        "target_programs": None,
     },
 ]
-
-INTAKE_TYPES = [
-    "New Course Request",
-    "Enrollment Exception",
-    "Access Issue",
-    "Completion Override",
-    "Report Request",
-]
-INTAKE_STATUSES = ["Open", "In Progress", "Resolved", "Closed"]
 
 
 def to_unix(dt: datetime) -> int:
@@ -130,7 +96,6 @@ def to_unix(dt: datetime) -> int:
 def create_schema(conn: sqlite3.Connection) -> None:
     conn.executescript(
         """
-        DROP TABLE IF EXISTS mdl_intake_requests;
         DROP TABLE IF EXISTS mdl_grade_grades;
         DROP TABLE IF EXISTS mdl_course_completions;
         DROP TABLE IF EXISTS mdl_user_enrolments;
@@ -144,9 +109,9 @@ def create_schema(conn: sqlite3.Connection) -> None:
             firstname TEXT NOT NULL,
             lastname TEXT NOT NULL,
             email TEXT NOT NULL,
-            department TEXT NOT NULL,
-            role TEXT NOT NULL,
-            hire_date TEXT NOT NULL,
+            program TEXT NOT NULL,
+            student_level TEXT NOT NULL,
+            cohort_start TEXT NOT NULL,
             deleted INTEGER DEFAULT 0
         );
 
@@ -155,8 +120,8 @@ def create_schema(conn: sqlite3.Connection) -> None:
             shortname TEXT NOT NULL,
             fullname TEXT NOT NULL,
             category TEXT NOT NULL,
-            compliance_required INTEGER NOT NULL,
-            recert_days INTEGER
+            is_core_course INTEGER NOT NULL,
+            term_days INTEGER
         );
 
         CREATE TABLE mdl_enrol (
@@ -191,19 +156,6 @@ def create_schema(conn: sqlite3.Connection) -> None:
             finalgrade REAL,
             timemodified INTEGER
         );
-
-        CREATE TABLE mdl_intake_requests (
-            id INTEGER PRIMARY KEY,
-            request_type TEXT NOT NULL,
-            requester_name TEXT NOT NULL,
-            requester_email TEXT NOT NULL,
-            department TEXT NOT NULL,
-            description TEXT NOT NULL,
-            status TEXT NOT NULL,
-            created_date TEXT NOT NULL,
-            resolved_date TEXT,
-            assigned_to TEXT
-        );
         """
     )
 
@@ -211,11 +163,11 @@ def create_schema(conn: sqlite3.Connection) -> None:
 def generate_users() -> list[dict]:
     users = []
     user_id = 1
-    for department, count in DEPARTMENTS.items():
+    for program, count in PROGRAMS.items():
         for _ in range(count):
             first = fake.first_name()
             last = fake.last_name()
-            hire_date = fake.date_between(start_date="-3y", end_date="-14d")
+            cohort_start = fake.date_between(start_date="-2y", end_date="-30d")
             users.append(
                 {
                     "id": user_id,
@@ -223,9 +175,11 @@ def generate_users() -> list[dict]:
                     "firstname": first,
                     "lastname": last,
                     "email": f"{first.lower()}.{last.lower()}@{EMAIL_DOMAIN}",
-                    "department": department,
-                    "role": random.choice(["Employee", "Manager", "Technician", "Analyst"]),
-                    "hire_date": hire_date.isoformat(),
+                    "program": program,
+                    "student_level": random.choice(
+                        ["Graduate Student", "Graduate Student", "Teaching Assistant"]
+                    ),
+                    "cohort_start": cohort_start.isoformat(),
                     "deleted": 0,
                 }
             )
@@ -234,36 +188,36 @@ def generate_users() -> list[dict]:
 
 
 def course_applies_to_user(course: dict, user: dict) -> bool:
-    targets = course["target_departments"]
+    targets = course["target_programs"]
     if not targets:
         return True
-    return user["department"] in targets
+    return user["program"] in targets
 
 
-def pick_completion_status(course: dict, hire_date: date, today: date) -> str:
-    tenure_days = (today - hire_date).days
+def pick_completion_status(course: dict, cohort_start: date, today: date) -> str:
+    weeks_enrolled = (today - cohort_start).days / 7
     category = course["category"]
 
-    if category == "Onboarding":
-        if tenure_days <= 30:
-            return random.choices(
-                ["completed_on_time", "in_progress", "not_started"],
-                weights=[0.55, 0.30, 0.15],
-            )[0]
+    if category == "Gen Ed":
         return random.choices(
-            ["completed_on_time", "overdue", "not_started"],
-            weights=[0.95, 0.03, 0.02],
+            ["completed_on_time", "in_progress", "not_started"],
+            weights=[0.70, 0.20, 0.10],
         )[0]
 
-    if category == "Mandatory":
+    if category == "Core":
+        if weeks_enrolled < 4:
+            return random.choices(
+                ["completed_on_time", "in_progress", "not_started"],
+                weights=[0.35, 0.40, 0.25],
+            )[0]
         return random.choices(
-            ["completed_on_time", "overdue", "not_started", "in_progress"],
-            weights=[0.78, 0.12, 0.06, 0.04],
+            ["completed_on_time", "past_due", "not_started", "in_progress"],
+            weights=[0.72, 0.10, 0.08, 0.10],
         )[0]
 
     return random.choices(
         ["completed_on_time", "in_progress", "not_started"],
-        weights=[0.45, 0.25, 0.30],
+        weights=[0.50, 0.28, 0.22],
     )[0]
 
 
@@ -280,43 +234,35 @@ def build_enrollment_records(users: list[dict], courses: list[dict], today: date
 
     for course_idx, course in enumerate(courses, start=1):
         enrolments_meta.append(
-            {
-                "id": enrol_id,
-                "courseid": course_idx,
-                "enrol": "manual",
-                "status": 0,
-            }
+            {"id": enrol_id, "courseid": course_idx, "enrol": "manual", "status": 0}
         )
 
         for user in users:
             if not course_applies_to_user(course, user):
                 continue
 
-            hire_date = date.fromisoformat(user["hire_date"])
-            if random.random() < 0.08 and course["category"] == "Elective":
+            if random.random() < 0.12 and course["category"] == "Elective":
                 continue
 
+            cohort_start = date.fromisoformat(user["cohort_start"])
             enrolled_dt = fake.date_time_between(
-                start_date=max(hire_date, today - timedelta(days=400)),
-                end_date=today - timedelta(days=7),
+                start_date=max(cohort_start, today - timedelta(days=300)),
+                end_date=today - timedelta(days=5),
             )
-            due_days = course["recert_days"] or 30
+            due_days = course["term_days"]
             due_date = (enrolled_dt.date() + timedelta(days=due_days)).isoformat()
 
-            status = pick_completion_status(course, hire_date, today)
+            status = pick_completion_status(course, cohort_start, today)
             completed_dt = None
             grade = None
 
             if status == "completed_on_time":
-                completed_dt = enrolled_dt + timedelta(days=random.randint(3, max(4, due_days - 5)))
-                grade = round(random.uniform(78, 100), 1)
-            elif status == "overdue":
+                completed_dt = enrolled_dt + timedelta(days=random.randint(7, max(8, due_days - 3)))
+                grade = round(random.uniform(72, 98), 1)
+            elif status == "past_due":
                 completed_dt = None
             elif status == "in_progress":
-                completed_dt = None
-                grade = None
-            else:
-                completed_dt = None
+                grade = round(random.uniform(60, 85), 1) if random.random() < 0.3 else None
 
             user_enrolments.append(
                 {
@@ -347,7 +293,7 @@ def build_enrollment_records(users: list[dict], courses: list[dict], today: date
                         "userid": user["id"],
                         "courseid": course_idx,
                         "finalgrade": grade,
-                        "timemodified": to_unix(completed_dt),
+                        "timemodified": to_unix(completed_dt) if completed_dt else to_unix(enrolled_dt),
                     }
                 )
                 grade_id += 1
@@ -358,33 +304,6 @@ def build_enrollment_records(users: list[dict], courses: list[dict], today: date
         enrol_id += 1
 
     return enrolments_meta, user_enrolments, completions, grades
-
-
-def generate_intake_requests(users: list[dict], today: date) -> list[dict]:
-    requests = []
-    for i in range(1, 41):
-        requester = random.choice(users)
-        created = fake.date_between(start_date=today - timedelta(days=120), end_date=today - timedelta(days=1))
-        status = random.choices(INTAKE_STATUSES, weights=[0.15, 0.20, 0.45, 0.20])[0]
-        resolved = None
-        if status in {"Resolved", "Closed"}:
-            resolved = (created + timedelta(days=random.randint(1, 14))).isoformat()
-
-        requests.append(
-            {
-                "id": i,
-                "request_type": random.choice(INTAKE_TYPES),
-                "requester_name": f"{requester['firstname']} {requester['lastname']}",
-                "requester_email": requester["email"],
-                "department": requester["department"],
-                "description": fake.sentence(nb_words=12),
-                "status": status,
-                "created_date": created.isoformat(),
-                "resolved_date": resolved,
-                "assigned_to": random.choice(["Learning Tech Team", "LMS Admin", "HR Partner"]),
-            }
-        )
-    return requests
 
 
 def insert_records(conn: sqlite3.Connection, table: str, records: list[dict]) -> None:
@@ -410,7 +329,6 @@ def export_csv(conn: sqlite3.Connection) -> None:
         "mdl_user_enrolments",
         "mdl_course_completions",
         "mdl_grade_grades",
-        "mdl_intake_requests",
     ]
     for table in tables:
         df = pd.read_sql_query(f"SELECT * FROM {table}", conn)
@@ -421,7 +339,7 @@ def export_csv(conn: sqlite3.Connection) -> None:
 def print_summary(conn: sqlite3.Connection) -> None:
     summary_sql = """
     SELECT
-        u.department,
+        u.program,
         c.fullname AS course_name,
         COUNT(*) AS total_enrolled,
         SUM(CASE WHEN cc.timecompleted IS NOT NULL THEN 1 ELSE 0 END) AS total_completed,
@@ -430,23 +348,22 @@ def print_summary(conn: sqlite3.Connection) -> None:
     JOIN mdl_course_completions cc ON cc.userid = u.id
     JOIN mdl_course c ON c.id = cc.course
     WHERE u.deleted = 0
-    GROUP BY u.department, c.fullname
-    ORDER BY u.department, c.fullname;
+    GROUP BY u.program, c.fullname
+    ORDER BY u.program, c.fullname;
     """
     df = pd.read_sql_query(summary_sql, conn)
-    print("\n=== Completion Summary by Department & Course ===")
+    print("\n=== Completion Summary by Program & Course ===")
     print(df.to_string(index=False))
 
-    overdue_sql = """
-    SELECT COUNT(*) AS overdue_count
+    past_due_sql = """
+    SELECT COUNT(*) AS past_due_count
     FROM mdl_user_enrolments ue
     JOIN mdl_enrol e ON e.id = ue.enrolid
     JOIN mdl_course_completions cc ON cc.userid = ue.userid AND cc.course = e.courseid
-    WHERE ue.due_date < date('now')
-      AND (cc.timecompleted IS NULL);
+    WHERE ue.due_date < date('now') AND cc.timecompleted IS NULL;
     """
-    overdue = pd.read_sql_query(overdue_sql, conn).iloc[0]["overdue_count"]
-    print(f"\nOverdue enrollments: {overdue}")
+    past_due = pd.read_sql_query(past_due_sql, conn).iloc[0]["past_due_count"]
+    print(f"\nPast-due enrollments: {past_due}")
 
 
 def main() -> None:
@@ -461,8 +378,8 @@ def main() -> None:
             "shortname": c["shortname"],
             "fullname": c["fullname"],
             "category": c["category"],
-            "compliance_required": c["compliance_required"],
-            "recert_days": c["recert_days"],
+            "is_core_course": c["is_core_course"],
+            "term_days": c["term_days"],
         }
         for c in courses
     ]
@@ -478,7 +395,6 @@ def main() -> None:
         insert_records(conn, "mdl_user_enrolments", user_enrolments)
         insert_records(conn, "mdl_course_completions", completions)
         insert_records(conn, "mdl_grade_grades", grades)
-        insert_records(conn, "mdl_intake_requests", generate_intake_requests(users, today))
         conn.commit()
 
         export_csv(conn)

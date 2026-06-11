@@ -21,6 +21,11 @@ echo "==> Seeding Moodle (users, courses, enrollments)..."
 docker exec lms-analytics-platform-moodle-1 php /seed-scripts/moodle_seed.php
 
 echo ""
+echo ""
+echo "Tip: For a clean Moodle reset, run:"
+echo "  docker compose down -v && rm -rf docker/mysqldata docker/moodledata && docker compose up -d"
+echo "  then re-run this script."
+echo ""
 echo "Done! Open http://localhost:8080"
-echo "  Admin:  admin / Admin123!"
-echo "  Student: any username from data/processed/mdl_user.csv / Student123!"
+echo "  Admin:   admin / Admin123!"
+echo "  Student: any username in data/processed/mdl_user.csv / Student123!"

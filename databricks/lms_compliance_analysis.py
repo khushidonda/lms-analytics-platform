@@ -1,8 +1,8 @@
 # Databricks notebook source
 # MAGIC %md
-# MAGIC # LMS Compliance Analysis
+# MAGIC # Online Learning Engagement Analysis
 # MAGIC
-# MAGIC PySpark notebook for SJSU Learning Analytics college project.
+# MAGIC Bonus PySpark notebook for the SJSU Data Visualization course project.
 # MAGIC Upload CSVs from `data/processed/` to DBFS before running.
 
 # COMMAND ----------

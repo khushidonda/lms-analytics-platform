@@ -1,103 +1,86 @@
-# LMS Analytics & Reporting Platform
+# Online Learning Engagement Dashboard
 
-**Khushi Donda** | MS Applied Data Intelligence — San Jose State University
-
-A college capstone-style project that simulates enterprise Learning Management System (LMS) operations and learning analytics. Includes Moodle (Docker), a SQL reporting warehouse, Power BI dashboards, SOP documentation, and intake request tracking.
-
----
-
-## What This Project Demonstrates
-
-| Skill Area | Implementation |
-|------------|----------------|
-| LMS administration | Moodle Docker setup, course creation, user enrollment |
-| SQL analytics | 5 queries with CTEs and window functions |
-| BI dashboards | Power BI 5-page dashboard (setup guide included) |
-| Documentation | 4 SOPs + data lineage mapping |
-| Data engineering | Python data generation, CSV/SQLite warehouse |
-| Databricks | PySpark compliance notebook |
+**Khushi Donda** · MS Applied Data Intelligence · San Jose State University  
+**Course project:** Data Visualization — Power BI dashboard on online learning data
 
 ---
 
-## Tech Stack
+## What is this?
 
-- **LMS:** Moodle (Docker — `erseco/alpine-moodle`)
-- **Database:** MariaDB (Moodle) + SQLite (reporting warehouse)
-- **Data Generation:** Python 3, Faker, Pandas
-- **Analytics:** SQL, Power BI, Databricks
-- **Documentation:** Markdown SOPs
+A **medium-sized graduate school project** for my Data Visualization class. The professor asked us to build a Power BI dashboard from a real-world dataset. I found public **online learning / training** data on Kaggle, cleaned it in Python, analyzed it with SQL, and built an interactive dashboard.
+
+Along the way I learned that this type of data often comes from **LMS platforms** (Moodle, Canvas, etc.), so I optionally explored Moodle in Docker to see how the underlying tables work.
+
+**This is a class project — not a corporate LMS implementation.**
+
+Read the full backstory: [`docs/PROJECT_STORY.md`](docs/PROJECT_STORY.md)
 
 ---
 
-## Quick Start
+## Dataset (medium scope)
 
-### 1. Generate analytics data
+| | Count |
+|---|------|
+| Graduate students | 120 |
+| Programs | 4 (SJSU MS programs) |
+| Online courses | 6 |
+| Enrollments | ~650 |
+
+**Programs:** MS Business Analytics, MS Data Science, MS Information Systems, MS Applied Data Intelligence
+
+---
+
+## Tech stack
+
+| Tool | Role in project |
+|------|-----------------|
+| **Power BI** | Main class deliverable (dashboard) |
+| **SQL** | Enrollment, completion, and trend queries |
+| **Python / Pandas** | Dataset generation and cleaning |
+| **CSV / SQLite** | Data warehouse for analysis |
+| **Moodle (Docker)** | Optional — explored LMS data model |
+| **Databricks** | Bonus notebook for aggregation practice |
+
+---
+
+## Quick start
 
 ```bash
-cd lms-analytics-platform
+# 1. Generate data
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r seed/requirements.txt
 python seed/generate_lms_data.py
 python seed/run_sql_exports.py
-```
 
-### 2. Start Moodle
+# 2. Build Power BI dashboard (main deliverable)
+#    See powerbi/POWERBI_SETUP.md
 
-```bash
+# 3. Optional: explore Moodle locally
 docker compose up -d
-# Wait 2–3 minutes on first run
+./seed/seed_moodle.sh
 # http://localhost:8080 — admin / Admin123!
 ```
 
-### 3. Feed data into Moodle
-
-```bash
-chmod +x seed/seed_moodle.sh
-./seed/seed_moodle.sh
-```
-
-This loads **280 students**, **9 courses**, enrollments, and completion records into the live Moodle UI.
-
-### 4. Build Power BI dashboard
-
-Follow [`powerbi/POWERBI_SETUP.md`](powerbi/POWERBI_SETUP.md).
-
 ---
 
-## Dataset Overview
-
-| Entity | Count |
-|--------|-------|
-| Students / employees | 280 across 7 departments |
-| Courses | 9 (mandatory, elective, onboarding) |
-| Enrollments | ~2,000+ |
-| Intake requests | 40 |
-
-**Departments:** Computer Science, Business Analytics, Information Systems, Data Science, Engineering, Health Sciences, Liberal Arts
-
-**Student login:** any username from `data/processed/mdl_user.csv` / password `Student123!`
-
----
-
-## Project Structure
+## Project structure
 
 ```
-lms-analytics-platform/
+├── docs/
+│   ├── PROJECT_STORY.md      # How the project started (read this!)
+│   ├── DATA_SOURCES.md       # Kaggle inspiration + synthetic data
+│   └── DATA_LINEAGE.md
 ├── seed/
-│   ├── generate_lms_data.py    # Analytics warehouse + CSV exports
-│   ├── moodle_seed.php         # Loads data into live Moodle
-│   └── seed_moodle.sh          # One-command Moodle seeding
-├── sql/                        # 5 analytics queries
-├── data/processed/             # CSVs for Power BI + Moodle seed
-├── docker-compose.yml
+│   ├── generate_lms_data.py  # Dataset generator
+│   └── moodle_seed.php       # Optional Moodle loader
+├── sql/                      # 5 analysis queries
+├── data/processed/           # CSVs for Power BI
 ├── powerbi/POWERBI_SETUP.md
-├── databricks/
-└── docs/sops/
+└── databricks/               # Bonus PySpark notebook
 ```
 
 ---
 
 ## Author
 
-**Khushi Donda** — MS Applied Data Intelligence, San Jose State University  
-[GitHub](https://github.com/khushidonda/lms-analytics-platform) | khushidonda.work@gmail.com
+Khushi Donda — [GitHub](https://github.com/khushidonda/lms-analytics-platform)

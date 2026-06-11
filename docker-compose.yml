@@ -44,7 +44,7 @@ services:
       DB_PREFIX: mdl_
       MOODLE_EMAIL: admin@sjsu.edu
       MOODLE_LANGUAGE: en
-      MOODLE_SITENAME: SJSU Learning Analytics LMS
+      MOODLE_SITENAME: SJSU Online Learning Demo
       MOODLE_USERNAME: admin
       MOODLE_PASSWORD: Admin123!
     ports:

@@ -64,8 +64,8 @@ $studentroleid = get_student_role_id();
 $manual = enrol_get_plugin('manual');
 
 // Update site name for college project
-$DB->set_field('config', 'value', 'SJSU Learning Analytics LMS', ['name' => 'fullname']);
-$DB->set_field('config', 'value', 'SJSU Learning Analytics LMS', ['name' => 'shortname']);
+$DB->set_field('config', 'value', 'SJSU Online Learning Demo', ['name' => 'fullname']);
+$DB->set_field('config', 'value', 'SJSU Online Learning Demo', ['name' => 'shortname']);
 
 $courses = read_csv("$datadir/mdl_course.csv");
 $users = read_csv("$datadir/mdl_user.csv");
@@ -92,7 +92,7 @@ foreach ($courses as $row) {
     $course->category = $categoryid;
     $course->fullname = $row['fullname'];
     $course->shortname = $shortname;
-    $course->summary = 'College training course for the LMS Analytics project.';
+    $course->summary = 'Online course for the SJSU Data Visualization class project.';
     $course->summaryformat = FORMAT_HTML;
     $course->format = 'topics';
     $course->numsections = 3;
@@ -137,7 +137,7 @@ foreach ($users as $row) {
     $user->firstname = $row['firstname'];
     $user->lastname = $row['lastname'];
     $user->email = $row['email'];
-    $user->department = $row['department'];
+    $user->department = $row['program'];
     $user->institution = 'San Jose State University';
     $user->city = 'San Jose';
     $user->country = 'US';

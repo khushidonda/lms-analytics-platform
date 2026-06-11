@@ -1,4 +1,4 @@
--- Training Participation Trend (Monthly completions by course category)
+-- Monthly course completions by category (last 12 months)
 
 WITH monthly_completions AS (
     SELECT

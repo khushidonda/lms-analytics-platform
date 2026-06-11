@@ -1,53 +1,18 @@
-department,course_name,category,total_enrolled,total_completed,completion_rate_pct,avg_days_to_complete
-Business Analytics,Academic Integrity & Ethics,Mandatory,45,33,73.3,183.8
-Business Analytics,Campus Safety Training,Mandatory,45,37,82.2,98.5
-Business Analytics,Data Privacy & FERPA Compliance,Mandatory,45,41,91.1,199.6
-Business Analytics,Diversity & Inclusion Workshop,Mandatory,45,36,80.0,169.8
-Business Analytics,LMS Platform Orientation,Onboarding,45,44,97.8,14.7
-Business Analytics,Power BI Fundamentals,Elective,41,18,43.9,14.9
-Business Analytics,SQL for Data Analytics,Elective,40,22,55.0,14.4
-Business Analytics,Statistical Methods for Research,Elective,43,17,39.5,11.2
-Computer Science,Academic Integrity & Ethics,Mandatory,50,38,76.0,194.2
-Computer Science,Campus Safety Training,Mandatory,50,37,74.0,98.1
-Computer Science,Data Privacy & FERPA Compliance,Mandatory,50,36,72.0,204.8
-Computer Science,Diversity & Inclusion Workshop,Mandatory,50,38,76.0,179.2
-Computer Science,LMS Platform Orientation,Onboarding,50,48,96.0,15.7
-Computer Science,Power BI Fundamentals,Elective,48,20,41.7,14.3
-Computer Science,SQL for Data Analytics,Elective,49,28,57.1,16.6
-Data Science,Academic Integrity & Ethics,Mandatory,55,47,85.5,183.2
-Data Science,Campus Safety Training,Mandatory,55,43,78.2,88.8
-Data Science,Data Privacy & FERPA Compliance,Mandatory,55,44,80.0,190.5
-Data Science,Diversity & Inclusion Workshop,Mandatory,55,42,76.4,199.6
-Data Science,LMS Platform Orientation,Onboarding,55,54,98.2,14.3
-Data Science,Power BI Fundamentals,Elective,47,20,42.6,16.3
-Data Science,SQL for Data Analytics,Elective,47,20,42.6,15.1
-Data Science,Statistical Methods for Research,Elective,54,22,40.7,13.9
-Engineering,Academic Integrity & Ethics,Mandatory,35,20,57.1,168.4
-Engineering,Campus Safety Training,Mandatory,35,28,80.0,79.9
-Engineering,Data Privacy & FERPA Compliance,Mandatory,35,27,77.1,181.5
-Engineering,Diversity & Inclusion Workshop,Mandatory,35,32,91.4,190.0
-Engineering,LMS Platform Orientation,Onboarding,35,30,85.7,12.0
-Engineering,Power BI Fundamentals,Elective,33,13,39.4,13.5
-Engineering,SQL for Data Analytics,Elective,30,12,40.0,10.8
-Health Sciences,Academic Integrity & Ethics,Mandatory,30,25,83.3,173.3
-Health Sciences,Campus Safety Training,Mandatory,30,25,83.3,88.4
-Health Sciences,Data Privacy & FERPA Compliance,Mandatory,30,22,73.3,182.7
-Health Sciences,Diversity & Inclusion Workshop,Mandatory,30,25,83.3,183.6
-Health Sciences,LMS Platform Orientation,Onboarding,30,28,93.3,15.5
-Health Sciences,Power BI Fundamentals,Elective,27,14,51.9,14.4
-Health Sciences,Research Ethics & IRB Training,Mandatory,30,24,80.0,188.4
-Health Sciences,SQL for Data Analytics,Elective,28,16,57.1,11.4
-Information Systems,Academic Integrity & Ethics,Mandatory,40,35,87.5,196.0
-Information Systems,Campus Safety Training,Mandatory,40,31,77.5,100.2
-Information Systems,Data Privacy & FERPA Compliance,Mandatory,40,34,85.0,174.2
-Information Systems,Diversity & Inclusion Workshop,Mandatory,40,32,80.0,191.6
-Information Systems,LMS Platform Orientation,Onboarding,40,39,97.5,12.2
-Information Systems,Power BI Fundamentals,Elective,36,16,44.4,12.4
-Information Systems,SQL for Data Analytics,Elective,36,14,38.9,16.6
-Liberal Arts,Academic Integrity & Ethics,Mandatory,25,22,88.0,201.7
-Liberal Arts,Campus Safety Training,Mandatory,25,17,68.0,89.6
-Liberal Arts,Data Privacy & FERPA Compliance,Mandatory,25,17,68.0,206.9
-Liberal Arts,Diversity & Inclusion Workshop,Mandatory,25,18,72.0,187.4
-Liberal Arts,LMS Platform Orientation,Onboarding,25,24,96.0,16.1
-Liberal Arts,Power BI Fundamentals,Elective,24,9,37.5,16.6
-Liberal Arts,SQL for Data Analytics,Elective,23,9,39.1,13.1
+program,course_name,category,total_enrolled,total_completed,completion_rate_pct,avg_days_to_complete
+MS Applied Data Intelligence,Academic Writing & Communication,Gen Ed,30,17,56.7,29.3
+MS Applied Data Intelligence,Business Statistics,Core,30,25,83.3,47.2
+MS Applied Data Intelligence,Introduction to Data Visualization,Core,30,22,73.3,57.1
+MS Applied Data Intelligence,Python for Data Analysis,Core,30,22,73.3,50.8
+MS Applied Data Intelligence,Research Methods,Core,30,22,73.3,56.5
+MS Business Analytics,Academic Writing & Communication,Gen Ed,32,25,78.1,25.2
+MS Business Analytics,Business Statistics,Core,32,23,71.9,55.3
+MS Business Analytics,Introduction to Data Visualization,Core,32,22,68.8,44.7
+MS Business Analytics,Research Methods,Core,32,20,62.5,47.4
+MS Data Science,Academic Writing & Communication,Gen Ed,30,21,70.0,23.5
+MS Data Science,Introduction to Data Visualization,Core,30,25,83.3,39.3
+MS Data Science,Python for Data Analysis,Core,30,20,66.7,49.6
+MS Data Science,Research Methods,Core,30,20,66.7,47.6
+MS Information Systems,Academic Writing & Communication,Gen Ed,28,20,71.4,26.9
+MS Information Systems,Information Systems Fundamentals,Elective,25,15,60.0,29.9
+MS Information Systems,Introduction to Data Visualization,Core,28,18,64.3,44.3
+MS Information Systems,Research Methods,Core,28,21,75.0,46.0

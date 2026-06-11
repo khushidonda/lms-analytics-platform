@@ -1,6 +1,5 @@
 check_name,issue_count
 completions_before_enrollment,0
 orphaned_enrollments,0
-completions_missing_users,0
 duplicate_completion_records,0
-overdue_without_due_date,0
+grades_out_of_range,0

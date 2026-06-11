@@ -1,10 +1,9 @@
--- Enrollment & Completion Summary by Department
--- Mirrors Moodle 4.3 reporting pattern (mdl_user, mdl_enrol, mdl_user_enrolments, mdl_course_completions)
+-- Enrollment & completion summary by graduate program
 
 WITH base_enrollments AS (
     SELECT
         u.id AS user_id,
-        u.department,
+        u.program,
         c.id AS course_id,
         c.fullname AS course_name,
         c.category,
@@ -15,13 +14,12 @@ WITH base_enrollments AS (
     JOIN mdl_enrol e ON e.id = ue.enrolid
     JOIN mdl_course c ON c.id = e.courseid
     LEFT JOIN mdl_course_completions cc
-        ON cc.userid = u.id
-       AND cc.course = c.id
+        ON cc.userid = u.id AND cc.course = c.id
     WHERE u.deleted = 0
 ),
 completion_agg AS (
     SELECT
-        department,
+        program,
         course_name,
         category,
         COUNT(*) AS total_enrolled,
@@ -40,8 +38,7 @@ completion_agg AS (
             1
         ) AS avg_days_to_complete
     FROM base_enrollments
-    GROUP BY department, course_name, category
+    GROUP BY program, course_name, category
 )
-SELECT *
-FROM completion_agg
-ORDER BY department, course_name;
+SELECT * FROM completion_agg
+ORDER BY program, course_name;
