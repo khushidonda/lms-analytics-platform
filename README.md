@@ -67,9 +67,10 @@ docker compose up -d
 
 ```
 ├── docs/
-│   ├── PROJECT_STORY.md      # How the project started (read this!)
+│   ├── PROJECT_STORY.md      # How the project started
 │   ├── DATA_SOURCES.md       # Kaggle inspiration + synthetic data
-│   └── DATA_LINEAGE.md
+│   ├── DATA_LINEAGE.md       # Full 9-metric lineage table
+│   └── sops/                 # SOP-001 through SOP-003
 ├── seed/
 │   ├── generate_lms_data.py  # Dataset generator
 │   └── moodle_seed.php       # Optional Moodle loader
