@@ -32,6 +32,6 @@ Wait ~3 minutes for Moodle to initialize on first run.
 docker compose down
 ```
 
-Data persists in `docker/moodledata/`, `docker/moodlehtml/`, and `docker/mysqldata/`.
+Data persists in `docker/moodledata/` and `docker/mysqldata/`. Moodle application files use a Docker named volume (`moodlehtml`).
 
 First startup takes 2–3 minutes while Moodle installs.

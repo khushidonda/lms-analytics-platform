@@ -41,11 +41,14 @@ services:
       DB_PREFIX: mdl_
       MOODLE_EMAIL: admin@joby.training
       MOODLE_LANGUAGE: en
-      MOODLE_SITENAME: Joby Aviation Training LMS
+      MOODLE_SITENAME: JobyAviationTrainingLMS
       MOODLE_USERNAME: admin
       MOODLE_PASSWORD: Admin123!
     ports:
       - "8080:8080"
     volumes:
       - ./docker/moodledata:/var/www/moodledata
-      - ./docker/moodlehtml:/var/www/html
+      - moodlehtml:/var/www/html
+
+volumes:
+  moodlehtml:
