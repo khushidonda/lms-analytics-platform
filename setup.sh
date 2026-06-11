@@ -18,6 +18,6 @@ python seed/run_sql_exports.py
 
 echo ""
 echo "Done! Next steps:"
-echo "  1. Build Power BI dashboard: see powerbi/POWERBI_SETUP.md"
-echo "  2. Start Moodle: docker compose up -d"
-echo "  3. Run SQL: sqlite3 data/lms.db < sql/02_overdue_compliance.sql"
+echo "  1. Start Moodle: docker compose up -d"
+echo "  2. Feed Moodle data: ./seed/seed_moodle.sh"
+echo "  3. Build Power BI dashboard: see powerbi/POWERBI_SETUP.md"

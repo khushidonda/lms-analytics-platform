@@ -2,7 +2,7 @@
 # MAGIC %md
 # MAGIC # LMS Compliance Analysis
 # MAGIC
-# MAGIC PySpark notebook for Joby Aviation Learning Analytics project.
+# MAGIC PySpark notebook for SJSU Learning Analytics college project.
 # MAGIC Upload CSVs from `data/processed/` to DBFS before running.
 
 # COMMAND ----------

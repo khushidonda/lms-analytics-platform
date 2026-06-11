@@ -1,8 +1,8 @@
 department,mandatory_enrollments,compliant_count,overdue_count,compliance_rate_pct,compliance_risk_level
-Corporate & Legal,75,58,3,77.3,YELLOW
-Safety & Compliance,125,98,4,78.4,YELLOW
-Flight Operations,270,214,7,79.3,YELLOW
-Software & Data,175,142,7,81.1,YELLOW
-People & HR,100,82,6,82.0,YELLOW
-Manufacturing & Quality,480,402,11,83.8,YELLOW
-Engineering & Certification,300,252,7,84.0,YELLOW
+Engineering,175,137,9,78.3,YELLOW
+Liberal Arts,125,98,6,78.4,YELLOW
+Computer Science,250,197,9,78.8,YELLOW
+Health Sciences,180,149,4,82.8,YELLOW
+Data Science,275,230,8,83.6,YELLOW
+Business Analytics,225,191,3,84.9,YELLOW
+Information Systems,200,171,4,85.5,YELLOW

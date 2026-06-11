@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate synthetic LMS data for the Joby Aviation Learning Analytics project.
+Generate synthetic LMS data for the SJSU Learning Analytics college project.
 
 Creates a SQLite reporting warehouse mirroring Moodle mdl_* table patterns,
 exports CSVs for Power BI / Databricks, and prints a completion summary.
@@ -25,44 +25,47 @@ fake = Faker()
 Faker.seed(42)
 random.seed(42)
 
+INSTITUTION = "San Jose State University"
+EMAIL_DOMAIN = "sjsu.edu"
+
 DEPARTMENTS = {
-    "Flight Operations": 45,
-    "Engineering & Certification": 60,
-    "Manufacturing & Quality": 80,
-    "Safety & Compliance": 25,
-    "People & HR": 20,
-    "Software & Data": 35,
-    "Corporate & Legal": 15,
+    "Computer Science": 50,
+    "Business Analytics": 45,
+    "Information Systems": 40,
+    "Data Science": 55,
+    "Engineering": 35,
+    "Health Sciences": 30,
+    "Liberal Arts": 25,
 }
 
 COURSES = [
     {
-        "shortname": "FAA-SAFETY",
-        "fullname": "FAA Safety Fundamentals",
+        "shortname": "ACAD-INTEG",
+        "fullname": "Academic Integrity & Ethics",
         "category": "Mandatory",
         "compliance_required": 1,
         "recert_days": 365,
         "target_departments": None,
     },
     {
-        "shortname": "EMERG-PROC",
-        "fullname": "Emergency Procedures Training",
+        "shortname": "CAMPUS-SAFE",
+        "fullname": "Campus Safety Training",
         "category": "Mandatory",
         "compliance_required": 1,
         "recert_days": 180,
         "target_departments": None,
     },
     {
-        "shortname": "DATA-PRIV",
-        "fullname": "Data Privacy & Cybersecurity",
+        "shortname": "FERPA-DATA",
+        "fullname": "Data Privacy & FERPA Compliance",
         "category": "Mandatory",
         "compliance_required": 1,
         "recert_days": 365,
         "target_departments": None,
     },
     {
-        "shortname": "HARASS-PREV",
-        "fullname": "Harassment Prevention",
+        "shortname": "DIVERSITY",
+        "fullname": "Diversity & Inclusion Workshop",
         "category": "Mandatory",
         "compliance_required": 1,
         "recert_days": 365,
@@ -77,36 +80,36 @@ COURSES = [
         "target_departments": None,
     },
     {
-        "shortname": "TECH-WRITE",
-        "fullname": "Technical Writing & Documentation",
+        "shortname": "SQL-ANALYTICS",
+        "fullname": "SQL for Data Analytics",
         "category": "Elective",
         "compliance_required": 0,
         "recert_days": None,
         "target_departments": None,
     },
     {
-        "shortname": "PBI-OPS",
-        "fullname": "Power BI for Operations",
+        "shortname": "POWERBI-101",
+        "fullname": "Power BI Fundamentals",
         "category": "Elective",
         "compliance_required": 0,
         "recert_days": None,
         "target_departments": None,
     },
     {
-        "shortname": "QMS-MFG",
-        "fullname": "Quality Management Systems",
-        "category": "Mandatory",
-        "compliance_required": 1,
-        "recert_days": 365,
-        "target_departments": ["Manufacturing & Quality"],
+        "shortname": "STATS-METHODS",
+        "fullname": "Statistical Methods for Research",
+        "category": "Elective",
+        "compliance_required": 0,
+        "recert_days": None,
+        "target_departments": ["Data Science", "Business Analytics"],
     },
     {
-        "shortname": "AVI-REG",
-        "fullname": "Aviation Regulations Overview",
+        "shortname": "RES-ETHICS",
+        "fullname": "Research Ethics & IRB Training",
         "category": "Mandatory",
         "compliance_required": 1,
         "recert_days": 365,
-        "target_departments": ["Flight Operations"],
+        "target_departments": ["Health Sciences"],
     },
 ]
 
@@ -219,7 +222,7 @@ def generate_users() -> list[dict]:
                     "username": f"{first.lower()}.{last.lower()}{user_id}",
                     "firstname": first,
                     "lastname": last,
-                    "email": f"{first.lower()}.{last.lower()}@joby.training",
+                    "email": f"{first.lower()}.{last.lower()}@{EMAIL_DOMAIN}",
                     "department": department,
                     "role": random.choice(["Employee", "Manager", "Technician", "Analyst"]),
                     "hire_date": hire_date.isoformat(),

@@ -1,52 +1,53 @@
 department,course_name,category,total_enrolled,total_completed,completion_rate_pct,avg_days_to_complete
-Corporate & Legal,Data Privacy & Cybersecurity,Mandatory,15,8,53.3,188.1
-Corporate & Legal,Emergency Procedures Training,Mandatory,15,10,66.7,88.9
-Corporate & Legal,FAA Safety Fundamentals,Mandatory,15,12,80.0,175.7
-Corporate & Legal,Harassment Prevention,Mandatory,15,14,93.3,186.7
-Corporate & Legal,LMS Platform Orientation,Onboarding,15,14,93.3,17.9
-Corporate & Legal,Power BI for Operations,Elective,14,7,50.0,17.4
-Corporate & Legal,Technical Writing & Documentation,Elective,14,7,50.0,12.7
-Engineering & Certification,Data Privacy & Cybersecurity,Mandatory,60,51,85.0,183.1
-Engineering & Certification,Emergency Procedures Training,Mandatory,60,48,80.0,95.0
-Engineering & Certification,FAA Safety Fundamentals,Mandatory,60,47,78.3,199.2
-Engineering & Certification,Harassment Prevention,Mandatory,60,48,80.0,172.3
-Engineering & Certification,LMS Platform Orientation,Onboarding,60,58,96.7,14.1
-Engineering & Certification,Power BI for Operations,Elective,56,24,42.9,14.0
-Engineering & Certification,Technical Writing & Documentation,Elective,54,30,55.6,15.4
-Flight Operations,Aviation Regulations Overview,Mandatory,45,36,80.0,179.4
-Flight Operations,Data Privacy & Cybersecurity,Mandatory,45,33,73.3,218.7
-Flight Operations,Emergency Procedures Training,Mandatory,45,33,73.3,101.3
-Flight Operations,FAA Safety Fundamentals,Mandatory,45,34,75.6,186.4
-Flight Operations,Harassment Prevention,Mandatory,45,34,75.6,174.4
-Flight Operations,LMS Platform Orientation,Onboarding,45,44,97.8,15.6
-Flight Operations,Power BI for Operations,Elective,43,17,39.5,14.5
-Flight Operations,Technical Writing & Documentation,Elective,44,25,56.8,16.2
-Manufacturing & Quality,Data Privacy & Cybersecurity,Mandatory,80,67,83.8,189.8
-Manufacturing & Quality,Emergency Procedures Training,Mandatory,80,63,78.8,92.6
-Manufacturing & Quality,FAA Safety Fundamentals,Mandatory,80,68,85.0,186.8
-Manufacturing & Quality,Harassment Prevention,Mandatory,80,63,78.8,201.2
-Manufacturing & Quality,LMS Platform Orientation,Onboarding,80,78,97.5,13.6
-Manufacturing & Quality,Power BI for Operations,Elective,68,31,45.6,14.6
-Manufacturing & Quality,Quality Management Systems,Mandatory,80,63,78.8,184.4
-Manufacturing & Quality,Technical Writing & Documentation,Elective,70,28,40.0,16.0
-People & HR,Data Privacy & Cybersecurity,Mandatory,20,15,75.0,174.9
-People & HR,Emergency Procedures Training,Mandatory,20,18,90.0,71.1
-People & HR,FAA Safety Fundamentals,Mandatory,20,13,65.0,170.2
-People & HR,Harassment Prevention,Mandatory,20,18,90.0,180.3
-People & HR,LMS Platform Orientation,Onboarding,20,18,90.0,14.1
-People & HR,Power BI for Operations,Elective,18,9,50.0,12.0
-People & HR,Technical Writing & Documentation,Elective,17,8,47.1,12.4
-Safety & Compliance,Data Privacy & Cybersecurity,Mandatory,25,20,80.0,175.9
-Safety & Compliance,Emergency Procedures Training,Mandatory,25,19,76.0,94.9
-Safety & Compliance,FAA Safety Fundamentals,Mandatory,25,15,60.0,149.2
-Safety & Compliance,Harassment Prevention,Mandatory,25,22,88.0,185.5
-Safety & Compliance,LMS Platform Orientation,Onboarding,25,22,88.0,13.0
-Safety & Compliance,Power BI for Operations,Elective,24,9,37.5,15.7
-Safety & Compliance,Technical Writing & Documentation,Elective,21,8,38.1,9.5
-Software & Data,Data Privacy & Cybersecurity,Mandatory,35,27,77.1,199.1
-Software & Data,Emergency Procedures Training,Mandatory,35,27,77.1,91.1
-Software & Data,FAA Safety Fundamentals,Mandatory,35,31,88.6,196.6
-Software & Data,Harassment Prevention,Mandatory,35,24,68.6,194.4
-Software & Data,LMS Platform Orientation,Onboarding,35,33,94.3,14.5
-Software & Data,Power BI for Operations,Elective,33,13,39.4,15.0
-Software & Data,Technical Writing & Documentation,Elective,33,15,45.5,11.4
+Business Analytics,Academic Integrity & Ethics,Mandatory,45,33,73.3,183.8
+Business Analytics,Campus Safety Training,Mandatory,45,37,82.2,98.5
+Business Analytics,Data Privacy & FERPA Compliance,Mandatory,45,41,91.1,199.6
+Business Analytics,Diversity & Inclusion Workshop,Mandatory,45,36,80.0,169.8
+Business Analytics,LMS Platform Orientation,Onboarding,45,44,97.8,14.7
+Business Analytics,Power BI Fundamentals,Elective,41,18,43.9,14.9
+Business Analytics,SQL for Data Analytics,Elective,40,22,55.0,14.4
+Business Analytics,Statistical Methods for Research,Elective,43,17,39.5,11.2
+Computer Science,Academic Integrity & Ethics,Mandatory,50,38,76.0,194.2
+Computer Science,Campus Safety Training,Mandatory,50,37,74.0,98.1
+Computer Science,Data Privacy & FERPA Compliance,Mandatory,50,36,72.0,204.8
+Computer Science,Diversity & Inclusion Workshop,Mandatory,50,38,76.0,179.2
+Computer Science,LMS Platform Orientation,Onboarding,50,48,96.0,15.7
+Computer Science,Power BI Fundamentals,Elective,48,20,41.7,14.3
+Computer Science,SQL for Data Analytics,Elective,49,28,57.1,16.6
+Data Science,Academic Integrity & Ethics,Mandatory,55,47,85.5,183.2
+Data Science,Campus Safety Training,Mandatory,55,43,78.2,88.8
+Data Science,Data Privacy & FERPA Compliance,Mandatory,55,44,80.0,190.5
+Data Science,Diversity & Inclusion Workshop,Mandatory,55,42,76.4,199.6
+Data Science,LMS Platform Orientation,Onboarding,55,54,98.2,14.3
+Data Science,Power BI Fundamentals,Elective,47,20,42.6,16.3
+Data Science,SQL for Data Analytics,Elective,47,20,42.6,15.1
+Data Science,Statistical Methods for Research,Elective,54,22,40.7,13.9
+Engineering,Academic Integrity & Ethics,Mandatory,35,20,57.1,168.4
+Engineering,Campus Safety Training,Mandatory,35,28,80.0,79.9
+Engineering,Data Privacy & FERPA Compliance,Mandatory,35,27,77.1,181.5
+Engineering,Diversity & Inclusion Workshop,Mandatory,35,32,91.4,190.0
+Engineering,LMS Platform Orientation,Onboarding,35,30,85.7,12.0
+Engineering,Power BI Fundamentals,Elective,33,13,39.4,13.5
+Engineering,SQL for Data Analytics,Elective,30,12,40.0,10.8
+Health Sciences,Academic Integrity & Ethics,Mandatory,30,25,83.3,173.3
+Health Sciences,Campus Safety Training,Mandatory,30,25,83.3,88.4
+Health Sciences,Data Privacy & FERPA Compliance,Mandatory,30,22,73.3,182.7
+Health Sciences,Diversity & Inclusion Workshop,Mandatory,30,25,83.3,183.6
+Health Sciences,LMS Platform Orientation,Onboarding,30,28,93.3,15.5
+Health Sciences,Power BI Fundamentals,Elective,27,14,51.9,14.4
+Health Sciences,Research Ethics & IRB Training,Mandatory,30,24,80.0,188.4
+Health Sciences,SQL for Data Analytics,Elective,28,16,57.1,11.4
+Information Systems,Academic Integrity & Ethics,Mandatory,40,35,87.5,196.0
+Information Systems,Campus Safety Training,Mandatory,40,31,77.5,100.2
+Information Systems,Data Privacy & FERPA Compliance,Mandatory,40,34,85.0,174.2
+Information Systems,Diversity & Inclusion Workshop,Mandatory,40,32,80.0,191.6
+Information Systems,LMS Platform Orientation,Onboarding,40,39,97.5,12.2
+Information Systems,Power BI Fundamentals,Elective,36,16,44.4,12.4
+Information Systems,SQL for Data Analytics,Elective,36,14,38.9,16.6
+Liberal Arts,Academic Integrity & Ethics,Mandatory,25,22,88.0,201.7
+Liberal Arts,Campus Safety Training,Mandatory,25,17,68.0,89.6
+Liberal Arts,Data Privacy & FERPA Compliance,Mandatory,25,17,68.0,206.9
+Liberal Arts,Diversity & Inclusion Workshop,Mandatory,25,18,72.0,187.4
+Liberal Arts,LMS Platform Orientation,Onboarding,25,24,96.0,16.1
+Liberal Arts,Power BI Fundamentals,Elective,24,9,37.5,16.6
+Liberal Arts,SQL for Data Analytics,Elective,23,9,39.1,13.1

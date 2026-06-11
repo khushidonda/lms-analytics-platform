@@ -42,15 +42,17 @@ services:
       DB_USER: moodle
       DB_PASS: moodle
       DB_PREFIX: mdl_
-      MOODLE_EMAIL: admin@joby.training
+      MOODLE_EMAIL: admin@sjsu.edu
       MOODLE_LANGUAGE: en
-      MOODLE_SITENAME: JobyAviationTrainingLMS
+      MOODLE_SITENAME: SJSU Learning Analytics LMS
       MOODLE_USERNAME: admin
       MOODLE_PASSWORD: Admin123!
     ports:
       - "8080:8080"
     volumes:
       - ./docker/moodledata:/var/www/moodledata
+      - ./data/processed:/seed-data:ro
+      - ./seed:/seed-scripts:ro
       - moodlehtml:/var/www/html
 
 volumes:

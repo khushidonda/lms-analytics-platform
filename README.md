@@ -1,65 +1,66 @@
 # LMS Analytics & Reporting Platform
 
-**Khushi Donda** | Interview prep for Joby Aviation — Learning Systems & Analytics Intern
+**Khushi Donda** | MS Applied Data Intelligence — San Jose State University
 
-A full-stack learning analytics platform simulating enterprise LMS operations at an aviation company. Includes a live Moodle instance (Docker), a SQL reporting warehouse, compliance dashboards, SOP documentation, and intake request management.
+A college capstone-style project that simulates enterprise Learning Management System (LMS) operations and learning analytics. Includes Moodle (Docker), a SQL reporting warehouse, Power BI dashboards, SOP documentation, and intake request tracking.
 
 ---
 
 ## What This Project Demonstrates
 
-| Joby JD Requirement | How This Project Covers It |
-|---------------------|---------------------------|
-| LMS administration, enrollments, course setup | Moodle Docker + admin SOPs |
-| SQL data extraction & validation | 5 production SQL queries with CTEs & window functions |
-| Learning reports & dashboards | Power BI 5-page dashboard (setup guide included) |
-| SOP documentation & data lineage | 4 SOPs + `DATA_LINEAGE.md` |
-| Moodle / Totara experience | Moodle 4.3 running locally |
-| Databricks analytics | PySpark notebook included |
-| Intake request management | `mdl_intake_requests` table + SOP-004 |
+| Skill Area | Implementation |
+|------------|----------------|
+| LMS administration | Moodle Docker setup, course creation, user enrollment |
+| SQL analytics | 5 queries with CTEs and window functions |
+| BI dashboards | Power BI 5-page dashboard (setup guide included) |
+| Documentation | 4 SOPs + data lineage mapping |
+| Data engineering | Python data generation, CSV/SQLite warehouse |
+| Databricks | PySpark compliance notebook |
 
 ---
 
 ## Tech Stack
 
-- **LMS:** Moodle (Docker — `erseco/alpine-moodle` + MariaDB 11)
-- **Database:** SQLite reporting warehouse (mirrors Moodle `mdl_*` schema)
-- **Data Generation:** Python 3.11, Faker, Pandas
-- **Analytics:** SQL (CTEs, window functions), Power BI, Databricks
-- **Documentation:** Markdown SOPs, data lineage, course catalog
+- **LMS:** Moodle (Docker — `erseco/alpine-moodle`)
+- **Database:** MariaDB (Moodle) + SQLite (reporting warehouse)
+- **Data Generation:** Python 3, Faker, Pandas
+- **Analytics:** SQL, Power BI, Databricks
+- **Documentation:** Markdown SOPs
 
 ---
 
 ## Quick Start
 
-### 1. Generate the dataset
+### 1. Generate analytics data
 
 ```bash
 cd lms-analytics-platform
-python3 -m venv .venv
-source .venv/bin/activate
+python3 -m venv .venv && source .venv/bin/activate
 pip install -r seed/requirements.txt
 python seed/generate_lms_data.py
 python seed/run_sql_exports.py
 ```
 
-### 2. Run Moodle locally (optional — for LMS admin practice)
+### 2. Start Moodle
 
 ```bash
 docker compose up -d
-# Moodle: http://localhost:8080  (admin / Admin123!)
-# MySQL:  localhost:3306         (moodle / moodle)
+# Wait 2–3 minutes on first run
+# http://localhost:8080 — admin / Admin123!
 ```
 
-### 3. Build the Power BI dashboard
-
-Follow step-by-step instructions in [`powerbi/POWERBI_SETUP.md`](powerbi/POWERBI_SETUP.md).
-
-### 4. Explore SQL queries
+### 3. Feed data into Moodle
 
 ```bash
-sqlite3 data/lms.db < sql/02_overdue_compliance.sql
+chmod +x seed/seed_moodle.sh
+./seed/seed_moodle.sh
 ```
+
+This loads **280 students**, **9 courses**, enrollments, and completion records into the live Moodle UI.
+
+### 4. Build Power BI dashboard
+
+Follow [`powerbi/POWERBI_SETUP.md`](powerbi/POWERBI_SETUP.md).
 
 ---
 
@@ -67,13 +68,14 @@ sqlite3 data/lms.db < sql/02_overdue_compliance.sql
 
 | Entity | Count |
 |--------|-------|
-| Employees | 280 across 7 departments |
+| Students / employees | 280 across 7 departments |
 | Courses | 9 (mandatory, elective, onboarding) |
-| Enrollments | ~2,400 |
-| Intake Requests | 40 |
-| Overdue Records | ~289 (by design) |
+| Enrollments | ~2,000+ |
+| Intake requests | 40 |
 
-**Departments:** Flight Operations, Engineering & Certification, Manufacturing & Quality, Safety & Compliance, People & HR, Software & Data, Corporate & Legal
+**Departments:** Computer Science, Business Analytics, Information Systems, Data Science, Engineering, Health Sciences, Liberal Arts
+
+**Student login:** any username from `data/processed/mdl_user.csv` / password `Student123!`
 
 ---
 
@@ -81,60 +83,21 @@ sqlite3 data/lms.db < sql/02_overdue_compliance.sql
 
 ```
 lms-analytics-platform/
-├── docker-compose.yml          # Moodle + MariaDB
 ├── seed/
-│   ├── generate_lms_data.py    # Synthetic data generator
-│   ├── run_sql_exports.py      # Export query results to CSV
-│   └── requirements.txt
-├── sql/
-│   ├── 01_enrollment_summary.sql
-│   ├── 02_overdue_compliance.sql
-│   ├── 03_participation_trend.sql
-│   ├── 04_data_validation.sql
-│   └── 05_compliance_score.sql
-├── data/
-│   ├── processed/              # CSV exports for Power BI
-│   └── lms.db                  # SQLite warehouse (generated)
-├── powerbi/
-│   └── POWERBI_SETUP.md        # Dashboard build guide + DAX
+│   ├── generate_lms_data.py    # Analytics warehouse + CSV exports
+│   ├── moodle_seed.php         # Loads data into live Moodle
+│   └── seed_moodle.sh          # One-command Moodle seeding
+├── sql/                        # 5 analytics queries
+├── data/processed/             # CSVs for Power BI + Moodle seed
+├── docker-compose.yml
+├── powerbi/POWERBI_SETUP.md
 ├── databricks/
-│   └── lms_compliance_analysis.py
-└── docs/
-    ├── DATA_LINEAGE.md
-    ├── COURSE_CATALOG.md
-    └── sops/                   # SOP-001 through SOP-004
+└── docs/sops/
 ```
-
----
-
-## Key SQL Example — Overdue Compliance
-
-```sql
-SELECT u.department, c.fullname, COUNT(*) AS overdue_count
-FROM mdl_user u
-JOIN mdl_user_enrolments ue ON ue.userid = u.id
-JOIN mdl_enrol e ON e.id = ue.enrolid
-JOIN mdl_course c ON c.id = e.courseid
-LEFT JOIN mdl_course_completions cc
-    ON cc.userid = u.id AND cc.course = c.id
-WHERE c.compliance_required = 1
-  AND ue.due_date < date('now')
-  AND cc.timecompleted IS NULL
-GROUP BY u.department, c.fullname;
-```
-
----
-
-## Interview Talking Points
-
-1. **Why Moodle?** Listed in the Joby JD as a desired platform; running it locally gave real admin experience with course setup, enrollments, and completion tracking.
-2. **Hardest part?** Moodle only records completions when a course is finished — identifying "not started" users required `LEFT JOIN` + `NULL` checks.
-3. **Documentation?** Three operational SOPs plus data lineage so any team member can trace every dashboard metric to its source table.
-4. **Aviation context?** Departments and courses mirror FAA certification training needs at a company like Joby.
 
 ---
 
 ## Author
 
 **Khushi Donda** — MS Applied Data Intelligence, San Jose State University  
-[GitHub](https://github.com/khushidonda) | khushidonda.work@gmail.com
+[GitHub](https://github.com/khushidonda/lms-analytics-platform) | khushidonda.work@gmail.com
