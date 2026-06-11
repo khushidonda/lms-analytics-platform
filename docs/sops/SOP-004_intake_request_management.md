@@ -10,8 +10,8 @@
 
 | Type | Example | Default Owner |
 |------|---------|---------------|
-| New Course Request | "We need a battery safety course for Manufacturing" | Learning Tech Team |
-| Enrollment Exception | "Contractor needs temporary access to FAA Safety" | LMS Admin |
+| New Course Request | "We need a new SQL workshop for Data Science students" | Learning Tech Team |
+| Enrollment Exception | "Guest lecturer needs temporary access to FERPA training" | LMS Admin |
 | Access Issue | "User cannot log into Moodle" | LMS Admin |
 | Completion Override | "User completed training offline — needs credit" | HR Partner |
 | Report Request | "Need Q2 compliance report for Flight Ops" | Learning Analytics Intern |
