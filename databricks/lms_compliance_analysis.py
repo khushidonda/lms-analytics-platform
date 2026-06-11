@@ -41,12 +41,12 @@ base = (
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC ## Compliance summary by department
+# MAGIC ## Completion summary by program
 
 # COMMAND ----------
 
 summary = (
-    base.groupBy("u.department", "c.fullname")
+    base.groupBy("u.program", "c.fullname")
     .agg(
         F.count("*").alias("total_enrolled"),
         F.sum(F.when(F.col("cc.timecompleted").isNotNull(), 1).otherwise(0)).alias("total_completed"),
@@ -57,7 +57,7 @@ summary = (
     )
 )
 
-display(summary.orderBy("department", "fullname"))
+display(summary.orderBy("program", "fullname"))
 
 # COMMAND ----------
 
@@ -90,5 +90,5 @@ display(trend.orderBy("category", "completion_month"))
 
 # COMMAND ----------
 
-summary.write.format("delta").mode("overwrite").saveAsTable("lms_compliance_summary")
-print("Saved lms_compliance_summary Delta table")
+summary.write.format("delta").mode("overwrite").saveAsTable("learning_engagement_summary")
+print("Saved learning_engagement_summary Delta table")
